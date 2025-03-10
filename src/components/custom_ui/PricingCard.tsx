@@ -1,0 +1,58 @@
+import { Check, Phone } from "lucide-react";
+import React from "react";
+import { Button } from "../ui/button";
+import WhatsappButton from "../dashboard/home/WhatsappButton";
+import FreecallButton from "../dashboard/home/FreecallButton";
+
+interface PricingFeatureProps {
+    title: string;
+    description: string;
+}
+
+interface PricingCardProps {
+    price: string;
+    yearLabel: string;
+    features: { title: string; description: string }[];
+    buttonText: string;
+}
+
+const PricingFeature: React.FC<PricingFeatureProps> = ({ title, description }) => {
+    return (
+        <div className="flex items-start space-x-2">
+            <span className="text-md "><Check /></span>
+            <div className="flex flex-col gap-y-[4px]">
+                <h4 className="font-[600] text-[20px] leading-[24px] text-black">{title}</h4>
+                <p className="text-[14px] text-gray-600 leading-[28px]">{description}</p>
+            </div>
+        </div>
+    );
+};
+
+const PricingCard: React.FC<PricingCardProps> = ({ price, yearLabel, features, buttonText }) => {
+    return (
+        <div className="border-2 border-[#00638D] rounded-lg p-6 shadow-lg bg-white max-w-[35rem] w-full  overflow-hidden">
+            <h2 className="text-[32px] font-semibold text-[#065374] mb-[8px]">Rs {price}</h2>
+            <button className="text-black border-2 border-[#2AA4F4]  font-medium my-[16px] text-[14px] leading-[28px] tracking-[0.2px] py-[4px] px-[40px] rounded-full">
+                {yearLabel}
+            </button>
+            <h3 className="text-[24px] font-semibold text-[#065374] mt-[8px] mb-4">
+                What All It Includes
+            </h3>
+            <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
+                {features.map((feature, index) => (
+                    <PricingFeature
+                        key={index}
+                        title={feature.title}
+                        description={feature.description}
+                    />
+                ))}
+            </div>
+            <div className="flex  flex-row sm:space-y-0 sm:space-x-4 mt-6 w-full">
+                <FreecallButton />
+                <WhatsappButton />
+            </div>
+        </div>
+    );
+};
+
+export default PricingCard;

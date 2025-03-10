@@ -1,0 +1,91 @@
+import Avatar from "@/Assets/Dashboard/about/avatar-founder.svg";
+import ServiceHeading from "@/components/custom_ui/ServiceHeading";
+const AboutSection = () => {
+    return (
+        <div className="">
+            {/* Intro Section */}
+            <section className="pt-[29px] px-[16px] md:px-[180px] mx-auto text-[14px] md:text-[18px] text-[#13171F] leading-[25.65px] md:leading-[28px] gap-[20px] flex flex-col pb-[170px] ">
+                <p className="font-[300]">
+                    Think financial planning and all you get is insurance
+                    agents, mutual funds agents, and relationship managers
+                    selling you the commission laded products without
+                    understanding your goals and risk profile. If you try to Do
+                    IT YOURSELF, you get countless opinions from family,
+                    friends, and social media. Fee-only planners either charge a
+                    high flat fee or charge a percentage of assets under advice.
+                </p>
+                <h5 className="font-[400]">
+                    At PLNR, we`re challenging all that.
+                </h5>
+                <p className="font-[300]">
+                    We take care of risk profiling, goal planning, asset
+                    allocation, product selection, tax efficiency, and
+                    rebalancing, all at a very affordable fee. Plus, we take
+                    care of it in a transparent and unbiased way.
+                </p>
+                <p className="font-[400]">
+                    So, you never have to worry about your finances anymore.
+                </p>
+            </section>
+
+            {/* Vision and Mission Section */}
+            <section className="flex flex-col px-[16px] md:px-0 text-center gap-[57px] pb-[140px]">
+                <div className="w-[300px] xs:w-fit m-auto">
+                    <ServiceHeading title="Our Vision" boldWords={["vision"]} />
+                    <span className=" text-black/85 mt-2">
+                        We have the vision to touch 1 Lakh lives through our
+                        financial planning services.
+                    </span>
+                </div>
+                <div className="w-[300px] xs:w-fit m-auto">
+                    <ServiceHeading
+                        title="Our Mission"
+                        boldWords={["mission"]}
+                    />
+                    <span className=" text-black/85 text-center px-[10px]">
+                        We’re on a mission to make financial planning simple and
+                        affordable.
+                    </span>
+                </div>
+            </section>
+
+            {/* Team Section */}
+            <section className="bg-[#F9F9F9] px-[16px] md:px-0 text-center pt-[60px]">
+                <ServiceHeading
+                    title="Meet The   Team"
+                    boldWords={["the", "team"]}
+                />
+                <div>
+                    <img
+                        src={Avatar.src}
+                        alt="Ajay Pruthi"
+                        className="w-[215px] h-[215px] mx-auto rounded-full object-cover mb-4"
+                    />
+                    <div className="flex flex-col gap-[15px] mt-2 text-[14px] md:text-[16px] leading-[19px] font-[300]">
+                        <h3 className="text-[22px] font-[500] leading-[25px] text-gray-800">
+                            Ajay Pruthi
+                        </h3>
+                        <h2>Founder</h2>
+                        <p>
+                            K.J. Somaiya Institute of Management, NIT Jalandhar
+                        </p>
+                        <p>
+                            SEBI RIA, CFPCM, Associate of Insurance Institute of
+                            India (AIII)
+                        </p>
+                        <p>
+                            15+ years of experience in personal financial
+                            planning space
+                        </p>
+                        <p>
+                            Experience in handling 500+ fee-only financial
+                            planning clients
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+};
+
+export default AboutSection;

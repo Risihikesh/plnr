@@ -1,0 +1,157 @@
+import Image from "next/image";
+import Understandthepolicyimg from "@/Assets/home/understand_the_policy_img.svg";
+import Link from "next/link";
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select";
+
+
+const Policy = () => {
+  return (
+      <div
+          id="compare"
+          className="relative w-full p-[16px] h-fit flex items-center justify-center overflow-hidden bg-[#00587A12]"
+      >
+          <div className="relative text-center px-[12px]">
+              <hr className="h-[3px] w-[80px] bg-[#00587A] m-auto mb-[37px] md:mb-[42px] mt-[87px] md:mt-[115px] border-none" />
+              <h1 className="text-2xl sm:text-3xl md:text-[32px] leading-[34px] font-normal mb-4">
+                  Understand Your&nbsp;
+                  <span className="font-bold block sm:inline">Policy</span>
+              </h1>
+              <p className="text-sm sm:text-base leading-[21px] md:text-xs text-gray-500 max-w-xl mx-auto">
+                  Understand what your policy has to offer. Read terms and
+                  conditions in plain English. And discover the good, the bad,
+                  and the leading features in your insurance plan.
+              </p>
+
+              <div className="mt-[32px] md:mt-[100px] flex flex-col md:flex-row justify-center items-center gap-[10px] xl:gap-[20px] bg-transparent md:bg-white bg-none rounded-lg md:py-[8px] md:px-[15px] p-0 border-none md:border-[1px] border-[#DDDDDD] pb-[100px] md:pb-auto">
+                  <Select>
+                      <SelectTrigger className="outline-none ring-0 bg-white md:bg-transparent py-[24px] px-[20px] md:px-0 md:py-0 border-none shadow-none text-[16px] lg:text-[18px] xl:text-[24px] leading-[18px] font-medium focus:ring-0 justify-between md:justify-start gap-[20px] lg:gap-[40px] xl:gap-[60px] w-full lg:w-fit">
+                          <SelectValue placeholder="Select Product" />
+                      </SelectTrigger>
+                      <SelectContent className="p-[11px] gap-[10px] w-full lg:w-fit">
+                          <SelectItem
+                              value="option1"
+                              className="focus:bg-primary focus:text-white text-[14px] leading-[20px] mb-[10px] py-[13px] px-[20px]"
+                          >
+                              Option 1
+                          </SelectItem>
+                          <SelectItem
+                              value="option2"
+                              className="focus:bg-primary focus:text-white text-[14px] leading-[20px] mb-[10px] py-[13px] px-[20px]"
+                          >
+                              Option 2
+                          </SelectItem>
+                          <SelectItem
+                              value="option3"
+                              className="focus:bg-primary focus:text-white text-[14px] leading-[20px] mb-[10px] py-[13px] px-[20px]"
+                          >
+                              Option 3
+                          </SelectItem>
+                      </SelectContent>
+                  </Select>
+                  <svg
+                      className="hidden lg:block"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2"
+                      height="72"
+                      viewBox="0 0 2 72"
+                      fill="none"
+                  >
+                      <path
+                          d="M1 70.5L1 1.5"
+                          stroke="#DDDDDD"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                      />
+                  </svg>
+                  <Select>
+                      <SelectTrigger className="outline-none text-[#818181] ring-0 bg-white md:bg-transparent py-[24px] px-[20px] md:px-0 md:py-0 border-none shadow-none text-[16px] lg:text-[20px] xl:text-[24px] leading-[24px] font-medium focus:ring-0 justify-between md:justify-start gap-[20px] lg:gap-[40px] xl:gap-[60px] w-full lg:w-fit">
+                          <SelectValue placeholder="Select Insurer" />
+                      </SelectTrigger>
+                      <SelectContent className="p-[11px] gap-[10px]">
+                          <SelectItem
+                              value="option1"
+                              className="focus:bg-primary focus:text-white text-[14px] leading-[20px] mb-[10px] py-[13px] px-[20px]"
+                          >
+                              Option 1
+                          </SelectItem>
+                          <SelectItem
+                              value="option2"
+                              className="focus:bg-primary focus:text-white text-[14px] leading-[20px] mb-[10px] py-[13px] px-[20px]"
+                          >
+                              Option 2
+                          </SelectItem>
+                          <SelectItem
+                              value="option3"
+                              className="focus:bg-primary focus:text-white text-[14px] leading-[20px] mb-[10px] py-[13px] px-[20px]"
+                          >
+                              Option 3
+                          </SelectItem>
+                      </SelectContent>
+                  </Select>
+                  <svg
+                      className="hidden lg:block"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="2"
+                      height="72"
+                      viewBox="0 0 2 72"
+                      fill="none"
+                  >
+                      <path
+                          d="M1 70.5L1 1.5"
+                          stroke="#DDDDDD"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                      />
+                  </svg>
+                  <Select>
+                      <SelectTrigger className="outline-none text-[#818181] ring-0 bg-white md:bg-transparent py-[24px] px-[20px] md:px-0 md:py-0 border-none shadow-none text-[16px] lg:text-[20px] xl:text-[24px] leading-[24px] font-medium focus:ring-0 justify-between md:justify-start gap-[20px] lg:gap-[40px] xl:gap-[60px] w-full lg:w-fit">
+                          <SelectValue placeholder="Select the policy" />
+                      </SelectTrigger>
+                      <SelectContent className="p-[11px] gap-[10px]">
+                          <SelectItem
+                              value="option1"
+                              className="focus:bg-primary focus:text-white text-[14px] leading-[20px] mb-[10px] py-[13px] px-[20px]"
+                          >
+                              Option 1
+                          </SelectItem>
+                          <SelectItem
+                              value="option2"
+                              className="focus:bg-primary focus:text-white text-[14px] leading-[20px] mb-[10px] py-[13px] px-[20px]"
+                          >
+                              Option 2
+                          </SelectItem>
+                          <SelectItem
+                              value="option3"
+                              className="focus:bg-primary focus:text-white text-[14px] leading-[20px] mb-[10px] py-[13px] px-[20px]"
+                          >
+                              Option 3
+                          </SelectItem>
+                      </SelectContent>
+                  </Select>
+
+                  <Link href="/details" className="w-full md:w-fit">
+                      <button className="mt-[46px] md:mt-0 md:ml-4 ml-0 bg-primary text-white hover:bg-transparent hover:outline hover:outline-2 hover:outline-primary hover:text-primary border rounded-md px-[40px] py-[18px] transition md:w-auto w-[90%] font-semibold whitespace-nowrap">
+                          Check Now
+                      </button>
+                  </Link>
+              </div>
+
+              <div className=" hidden mt-12 md:flex justify-center">
+                  <Image
+                      src={Understandthepolicyimg}
+                      alt="Policy Illustration"
+                      className="w-72 sm:w-96"
+                  />
+              </div>
+          </div>
+      </div>
+  );
+};
+
+export default Policy;
