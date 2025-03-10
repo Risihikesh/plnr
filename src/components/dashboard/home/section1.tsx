@@ -55,7 +55,7 @@ const Home = () => {
         <div>
             <div className="flex flex-col lg:flex-row items-center gap-10 p-[10px] xxs:p-[20px] mb-[10px]">
                 <div className="flex flex-col gap-y-6 lg:pl-20 p-2 sm:p-7 justify-start md:items-start">
-                    <p className="lg:text-[48px] xxs:text-[30px] leading-[32px] xxs:leading-[38px] md:text-[32px] md:leading-[48px] font-extrabold">
+                    <p className="lg:text-[48px] text-[24px] xxs:text-[30px] leading-[32px] xxs:leading-[38px] md:text-[32px] md:leading-[48px] font-extrabold">
                         Financial planning made easy
                     </p>
                     <p className="mt-[-10px]">
