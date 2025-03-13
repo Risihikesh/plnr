@@ -28,7 +28,8 @@ export function HowWeDoIt({ sections }: HowWeDoItProps) {
     }
 
     return (
-        <section className="py-8 md:py-16 bg-white">
+        <section className="py-8 lg:mt-[-90px] md:py-16 bg-white">
+        <section className="py-8  md:py-16 bg-white">
             <div className="px-[10px] sm:px-[30px] md:px-[80px] mx-auto">
                 <div className="text-center flex flex-col items-center justify-between gap-8 mb-8">
                     <div className="md:h-[3px] h-[2px] w-[80px] mb-[2.5%] bg-[#00587A]" />

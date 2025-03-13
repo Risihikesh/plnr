@@ -216,3 +216,16 @@ body {
         transform: translateX(calc(-100% - var(--gap)));
     }
 }
+
+@media (min-width: 1024px) and (max-width: 1300px) {
+    .lg-scale-90 {
+      transform: scale(1);
+    }
+  }
+  
+  @media (min-width: 1024px) and (max-width: 1300px) {
+    .lg-scale-75 {
+      transform: scale(0.75);
+    }
+  }
+  

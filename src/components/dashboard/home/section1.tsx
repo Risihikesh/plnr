@@ -78,7 +78,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-2  mb-[10px]">
+            <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-2  mb-[10px]  lg-scale-90">
                 <div className="flex flex-col gap-y-6 lg:gap-y-4 lg:pl-24 lg:p-6 p-2 sm:p-7 justify-start md:items-start">
                     {/* <p className="text-[27px] leading-[32px] xxs:text-[28px] xxs:leading-[38px] sm:text-[40px] sm:leading-[50px] md:text-[45px] md:leading-[55px] lg:text-[30px] lg:leading-[38px] xx:text-[40px] xx:leading-[50px] xl:text-[45px] xl:leading-[55px] xll:text-[55px] xll:leading-[70px] font-extrabold">
                         <span className="whitespace-nowrape">Financial planning</span><br /> <span className="whitespace-nowrape">made easy</span>

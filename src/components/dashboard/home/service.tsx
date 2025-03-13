@@ -82,10 +82,10 @@ const Services = () => {
                 </div>
             </div>
 
-            <div className="relative z-2 w-full lg:pt-[20px]">
+            <div className="relative z-2 w-full lg:pt-[20px]  lg:scale-[0.8] lg:origin-top-right lg:mt-[5px]">
                 <div
                     className="ml-auto bg-white shadow-lg mr-0 lg:mr-[30px] xl:mr-[100px] w-full py-[28px] md:py-[36px] px-[15px] sm:px-[47px]
-                lg:w-[51%] text-gray-800 rounded-lg flex flex-col gap-[28px] md:gap-[35px]"
+                lg:w-[61%] text-gray-800 rounded-lg flex flex-col gap-[28px] md:gap-[35px] "
                 >
                     <h3 className="md:text-[28px] md:leading-[45px] leading-[28px] text-[19px] font-[300] text-[#00587A] cursor-default w-[106%]">
                         We offer&nbsp;
@@ -113,7 +113,7 @@ const Services = () => {
                     </h3>
 
                     {/* Flex container for price and items */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full justify-between mt-[-8px]">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap- w-full justify-between mt-[-8px]">
                         {featureData.items.map((item, idx) => (
                             <div
                                 className="flex items-start space-x-2 md:space-x-3"
@@ -132,7 +132,7 @@ const Services = () => {
                         ))}
                     </div>
 
-                    <div className="flex flex-col gap-[20px] sm:flex-row sm:space-x-4 w-full">
+                    <div className="flex flex-col lg:flex-row  lg:justify-between gap-[20px] sm:flex-row sm:space-x-4 w-full">
                         <FreecallButton />
                         <WhatsappButton />
                     </div>
