@@ -77,9 +77,9 @@ const Home = () => {
     // }, []);
 
     return (
-        <div>
-            <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-6 p-[10px] mb-[10px]">
-                <div className="flex flex-col gap-y-6 lg:pl-24 p-2 sm:p-7 justify-start md:items-start">
+        <>
+            <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-2  mb-[10px]">
+                <div className="flex flex-col gap-y-6 lg:gap-y-4 lg:pl-24 lg:p-6 p-2 sm:p-7 justify-start md:items-start">
                     {/* <p className="text-[27px] leading-[32px] xxs:text-[28px] xxs:leading-[38px] sm:text-[40px] sm:leading-[50px] md:text-[45px] md:leading-[55px] lg:text-[30px] lg:leading-[38px] xx:text-[40px] xx:leading-[50px] xl:text-[45px] xl:leading-[55px] xll:text-[55px] xll:leading-[70px] font-extrabold">
                         <span className="whitespace-nowrape">Financial planning</span><br /> <span className="whitespace-nowrape">made easy</span>
                     </p>
@@ -89,16 +89,16 @@ const Home = () => {
                             {displayText}
                         </span>
                     </p> */}
-                    <p className="text-[27px] lg:text-[40px] xxs:text-[30px] leading-[32px] xxs:leading-[38px] md:text-[32px] md:leading-[48px] font-extrabold">
+                    <p className="text-[27px] lg:text-[36px] xxs:text-[30px] leading-[32px] xxs:leading-[38px] md:text-[32px] md:leading-[48px] font-extrabold">
                         Financial planning <span className="whitespace-nowrap">made easy</span>
                     </p>
                     <p className="mt-[-10px] ml-[-5px]">
                         &nbsp;
-                        <span className="text-[#00587A] lg:text-[40px] font-extrabold whitespace-nowrap text-[27px] lg:whitespace-normal md:text-[32px] xxs:leading-[38px] md:leading-[48px] text-left">
+                        <span className="text-[#00587A] lg:text-[36px] font-extrabold whitespace-nowrap text-[27px] lg:whitespace-normal md:text-[32px] xxs:leading-[38px] md:leading-[48px] text-left">
                             {displayText}
                         </span>
                     </p>
-                    <p className="text-[18px] leading-[22px] md:leading-[28.29px] lg:font-normal font-normal text-[#13171F] mt-2">
+                    <p className="text-[18px] leading-[22px] md:leading-[28.29px] lg:font-normal font-normal text-[#13171F] mt-1">
                         With PLNR, you get unbiased advice for your personal
                         finances. Clean up your portfolio,choose the right
                         financial product with tax efficiency, get a second
@@ -124,7 +124,7 @@ const Home = () => {
                     className="w-full lg:h-[387px] md:w-[70%] lg:w-[50%] max-w-[700px] min-w-[50%] lg:min-w-[40%]"
                 />
             </div>
-        </div>
+        </>
     );
 };
 

@@ -60,7 +60,7 @@ const Header = () => {
                   </Link>
               </div>
           </div>
-          <div className="flex justify-between px-4 py-4 md:py-0 md:pb-[1px] items-center">
+          <div className="flex justify-between px-4  py-4 md:py-0 md:pb-[1px] items-center">
               <div className="flex justify-center gap-0 md:gap-7">
                   <button
                       className="md:hidden flex items-center justify-center p-2"
