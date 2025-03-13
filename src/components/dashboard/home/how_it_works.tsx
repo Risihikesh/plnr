@@ -69,8 +69,8 @@ const HowItWorks = () => {
                 alt={step.title}
                 className="h-[180px]"
               />
-              <h3 className="text-[14px] leading-[21px] md:text-[24px] md:leading-[38px] font-semibold whitespace-nowrap">{step.title}</h3>
-              <p className="text-gray-600 text-[8px] leading-[13px] md:text-[14px] md:leading-[24px]">{step.description}</p>
+              <h3 className="text-[16px] leading-[21px] md:text-[24px] md:leading-[38px] font-semibold whitespace-nowrap">{step.title}</h3>
+              <p className="text-gray-600 text-[14px] leading-[16px] md:text-[16px] md:leading-[24px]">{step.description}</p>
             </div>
           ))}
         </div>

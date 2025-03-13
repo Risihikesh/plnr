@@ -9,6 +9,20 @@ import WhatsappButton from "./WhatsappButton";
 import FreecallButton from "./FreecallButton";
 
 const Home = () => {
+
+    // type heroData = {
+    //     title: string;
+    //     description: string;
+    //     image?: string;
+    //     highlightedTexts: [
+    //         {
+    //             text: string;
+    //         }
+    //     ];
+    // };
+    // const [data, setData] = useState<heroData>();
+    
+    
     const rotatingTexts = [
         "SEBI registered",
         "No product selling",
@@ -51,20 +65,40 @@ const Home = () => {
         return () => clearTimeout(timeout);
     }, [displayText, isDeleting, rotatingTexts, currentTextIndex]);
 
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const response = await fetch(
+    //             "http://localhost:3000/api/app-data/homepage/hero"
+    //         );
+    //         const data = await response.json();
+    //         setData(data.data);
+    //     };
+    //     fetchData();
+    // }, []);
+
     return (
         <div>
-            <div className="flex flex-col lg:flex-row items-center gap-10 p-[10px] xxs:p-[20px] mb-[10px]">
-                <div className="flex flex-col gap-y-6 lg:pl-20 p-2 sm:p-7 justify-start md:items-start">
-                    <p className="lg:text-[48px] text-[24px] xxs:text-[30px] leading-[32px] xxs:leading-[38px] md:text-[32px] md:leading-[48px] font-extrabold">
-                        Financial planning made easy
+            <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-6 p-[10px] mb-[10px]">
+                <div className="flex flex-col gap-y-6 lg:pl-24 p-2 sm:p-7 justify-start md:items-start">
+                    {/* <p className="text-[27px] leading-[32px] xxs:text-[28px] xxs:leading-[38px] sm:text-[40px] sm:leading-[50px] md:text-[45px] md:leading-[55px] lg:text-[30px] lg:leading-[38px] xx:text-[40px] xx:leading-[50px] xl:text-[45px] xl:leading-[55px] xll:text-[55px] xll:leading-[70px] font-extrabold">
+                        <span className="whitespace-nowrape">Financial planning</span><br /> <span className="whitespace-nowrape">made easy</span>
                     </p>
                     <p className="mt-[-10px]">
                         &nbsp;
-                        <span className="text-[#00587A] font-extrabold  whitespace-nowrap lg:whitespace-normal xxs:text-[30px] md:text-[32px] xxs:leading-[38px] md:leading-[48px] text-left">
+                        <span className="text-[#00587A] font-extrabold whitespace-nowrap text-[27px] leading-[32px] xxs:text-[28px] xxs:leading-[33px] sm:text-[40px] sm:leading-[50px]  md:text-[45px] md:leading-[55px] lg:text-[30px] lg:leading-[38px] xx:text-[40px] xx:leading-[50px] xl:text-[45px] xl:leading-[55px] xll:text-[50px] xll:leading-[60px]  text-left relative left-[-5px]">
+                            {displayText}
+                        </span>
+                    </p> */}
+                    <p className="text-[27px] lg:text-[40px] xxs:text-[30px] leading-[32px] xxs:leading-[38px] md:text-[32px] md:leading-[48px] font-extrabold">
+                        Financial planning <span className="whitespace-nowrap">made easy</span>
+                    </p>
+                    <p className="mt-[-10px] ml-[-5px]">
+                        &nbsp;
+                        <span className="text-[#00587A] lg:text-[40px] font-extrabold whitespace-nowrap text-[27px] lg:whitespace-normal md:text-[32px] xxs:leading-[38px] md:leading-[48px] text-left">
                             {displayText}
                         </span>
                     </p>
-                    <p className="text-[18px] leading-[22px] md:leading-[27px] font-normal text-[#13171F] mt-2">
+                    <p className="text-[18px] leading-[22px] md:leading-[28.29px] lg:font-normal font-normal text-[#13171F] mt-2">
                         With PLNR, you get unbiased advice for your personal
                         finances. Clean up your portfolio,choose the right
                         financial product with tax efficiency, get a second
@@ -73,7 +107,7 @@ const Home = () => {
                         them with proper equity/debt allocation, all in the same
                         place.
                     </p>
-                    <div className="flex p-2 border m-auto sm:m-0 border-[#00587A] rounded-3xl justify-center items-center w-[276px] cursor-pointer hover:shadow-lg hover:scale-105 hover:bg-[#E6F7FB] transition-all duration-300 ease-in-out sm:my-[10px]">
+                    <div className="flex p-2 border m-auto sm:m-0 border-[#00587A] rounded-3xl justify-center items-center w-[276px] cursor-pointer hover:shadow-lg hover:scale-105 hover:bg-[#E6F7FB] transition-all duration-300 ease-in-out">
                         <Image src={Playbuttonimg} alt="no-img" />
                         <p className="text-[#00587A] font-semibold underline">
                             Mentor's Testimonial
@@ -87,7 +121,7 @@ const Home = () => {
                 <Image
                     src={Homeimg}
                     alt="no-img"
-                    className="w-full md:w-[70%] lg:w-[50%] max-w-[700px] min-w-[50%]"
+                    className="w-full lg:h-[387px] md:w-[70%] lg:w-[50%] max-w-[700px] min-w-[50%] lg:min-w-[40%]"
                 />
             </div>
         </div>

@@ -31,7 +31,7 @@ const Header = () => {
     }
   }, [pathname]);
   return (
-      <div className="flex flex-col gap-y-3 shadow-[0px_8px_24px_0px_rgba(149,157,165,0.20)]">
+      <div className="flex flex-col gap-y-1 shadow-[0px_8px_24px_0px_rgba(149,157,165,0.20)]">
           <div className="flex items-start justify-center sm:justify-start">
               <div className="m-auto bg-[#E6EDF9] flex items-center md:ml-8 ml-2 mr-2 rounded-bl-lg rounded-br-lg text-[12px] leading-[20px] font-medium overflow-hidden">
                   <Link

@@ -12,9 +12,13 @@ import Testimonials from "@/components/dashboard/home/testimonials/page";
 import Services from "@/components/dashboard/home/service";
 import FinancePlan from "@/components/dashboard/home/FinancePlan";
 export const metadata = constructMetadata();
+import { auth } from "../../../../auth";
 
-const Page = () => {
-  const sections = createVideoSections(videoData.urls, videoData.titles);
+const Page = async () => {
+    const sections = createVideoSections(videoData.urls, videoData.titles);
+    
+    const session = await auth();
+    console.log(session);
 
   return (
     <div>

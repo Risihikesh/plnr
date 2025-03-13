@@ -10,7 +10,7 @@ const Page = () => {
         <div>
             <BannerHeading img={BannerImg} heading='Investor' highlightedText='Charter' />
             <InvestmentAdviserDetails />
-            <RegulatoryDisclosureModal />
+            {/* <RegulatoryDisclosureModal /> */}
         </div>
     )
 }

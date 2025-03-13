@@ -4,9 +4,11 @@ import Header from "../(dashboard)/header";
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <div className="bg-background overflow-x-hidden w-screen overflow-y-auto pb-[50px]">
-            <Header />
+            <div className="block sm:hidden">
+                <Header />
+            </div>
             <main className="flex-1 justify-center w-full">
-                <div className="flex-col-between x:flex-center mt-[34px] xs:mt-[40px] px-[20px] xs:px-[50px] w-full gap-[50px] xl:gap-[100px] 2xl:gap-[100px]">
+                <div className="flex-col-between x:flex-center mt-[34px] xs:mt-[100px] px-[20px] xs:px-[50px] w-full gap-[50px] xl:gap-[100px] 2xl:gap-[100px]">
                     {children}
                     <div className="text-center">
                         <div className="text-[20px] xs:text-[30px] leading-[28px] xs:leading-[36px] font-bold mb-[24px] text-[#466D8D] px-[50px] xs:px-0">

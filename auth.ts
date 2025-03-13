@@ -1,11 +1,11 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
-import { DrizzleAdapter } from "@auth/drizzle-adapter";
-import { db } from "@/db";
+import { PrismaAdapter } from "@auth/prisma-adapter";
+import { prisma } from "@/prisma";
 // import * as schema from "@/db/schema";
 import type { Provider } from "next-auth/providers";
 import Credentials from "next-auth/providers/credentials";
-import { autherize } from "@/action";
+import { authorize } from "@/action";
 
 export const providers: Provider[] = [Google];
 
@@ -29,7 +29,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                 password: {},
             },
             authorize: async (credentials) => {
-                return await autherize(credentials);
+                return await authorize(credentials);
             },
         }),
     ],
@@ -37,7 +37,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         strategy: "jwt",
         maxAge: 30 * 24 * 60 * 60,
     },
-    adapter: DrizzleAdapter(db),
+    adapter: PrismaAdapter(prisma),
     callbacks: {
         async jwt({ token, user, account }) {
             if (user) {

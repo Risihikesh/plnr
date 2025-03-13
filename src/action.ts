@@ -2,8 +2,7 @@
 
 import { signUpSchemaType } from "./components/auth/SignUpForm";
 import { signIn } from "../auth";
-import { db } from "./db";
-import * as schema from "./db/schema";
+import { prisma } from "./prisma";
 
 export async function handleCredentialsSignIn(formData: any) {
     try {
@@ -28,28 +27,35 @@ export async function handleCredentialsSignIn(formData: any) {
 
 export async function handleSignUp(data: signUpSchemaType) {
     try {
-        
         console.log(data);
-        await db.insert(schema.users).values({
-            email: data.email,
-            mobileNumber: data.phone,
-            password: data.password,
-        })
-    }
-    catch (error) {
+
+        await prisma.user.create({
+            data: {
+                email: data.email,
+                mobileNumber: data.phone,
+                password: data.password, // Consider hashing the password before storing
+            },
+        });
+    } catch (error) {
         console.log(error);
+    } finally {
+        await prisma.$disconnect();
     }
 }
 
-export async function autherize(credentials: any) {
-    const user = await db.query.users.findFirst({
-        where(fields, operators) {
-            return operators.eq(fields.email, credentials.email) && operators.eq(fields.password, credentials.password);    
-        },
-    });
-    if (user) {
-        return user;
-    } else {
+export async function authorize(credentials: any) {
+    try {
+        const user = await prisma.user.findFirst({
+            where: {
+                email: credentials.email,
+                password: credentials.password, // Consider using password hashing instead of storing plain text
+            },
+        });
+        return user || null;
+    } catch (error) {
+        console.error("Authorization Error:", error);
         return null;
+    } finally {
+        await prisma.$disconnect();
     }
 }

@@ -48,7 +48,7 @@ export function HowWeDoIt({ sections }: HowWeDoItProps) {
                             key={section.id}
                             className="flex flex-col items-center"
                         >
-                            <h3 className="text-[10px] leading-[15px] text-[#00587A] lg:text-[20px] lg:leading-[30px] mb-[4px] md:mb-[13px] font-bold  ">
+                            <h3 className="text-[14px] leading-[20px] whitespace-nowrap overflow-hidden text-[#00587A] lg:text-[20px] lg:leading-[30px] mb-[4px] md:mb-[13px] font-semibold lg:font-bold  ">
                                 {section.title}
                             </h3>
 

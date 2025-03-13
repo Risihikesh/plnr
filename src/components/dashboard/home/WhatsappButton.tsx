@@ -16,8 +16,7 @@ const WhatsappButton = ({ disabled }: { disabled?: boolean }) => {
             disabled={disabled}
         >
             <svg
-                width="14"
-                height="14"
+                className="w-[20px] h-[20px] relative top-[1px]"
                 viewBox="0 0 14 14"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +27,7 @@ const WhatsappButton = ({ disabled }: { disabled?: boolean }) => {
                 />
             </svg>
 
-            <p className="text-[16px] leading-[30px]">Whatsapp</p>
+            <p className="text-[18px] leading-[30px]">Whatsapp</p>
         </button>
     );
 };

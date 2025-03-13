@@ -41,7 +41,7 @@ const WhyPlnr = () => {
     ];
 
     return (
-        <section className="relative text-white py-16 px-4">
+        <section className="relative text-white py-16 px-[16px]">
             <div
                 className="absolute inset-0 bg-[#00587A]"
                 style={{
@@ -49,7 +49,7 @@ const WhyPlnr = () => {
                 }}
             ></div>
 
-            <div className="relative max-w-7xl mx-auto px-6 text-center">
+            <div className="relative max-w-7xl mx-auto text-center">
                 <hr className="h-[3px] w-[80px] bg-[#00587A] m-auto mb-[12px] border-none" />
                 <h2 className="text-[30px] md:text-[32px] leading-[35px] mb-[24px] font-light">
                     Why&nbsp;
@@ -60,25 +60,25 @@ const WhyPlnr = () => {
                     success.
                 </p>
 
-                <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-[10px] xs:gap-[16px] md:gap-6">
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="w-[160px] md:w-fit bg-white text-gray-800 rounded-lg shadow-lg p-2 md:p-6 flex flex-col justify-between items-center transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-blue-50 cursor-default max-w-[350px]"
+                            className="w-fit bg-white text-gray-800 rounded-lg shadow-lg p-2 md:p-6 flex flex-col gap-[16px] items-center transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-blue-50 cursor-default max-w-[350px]"
                         >
-                            <div>
-                                <h3 className="text-[11px] leading-[13px] md:text-[24px] md:leading-[30px] font-bold mb-2">
-                                    {feature.title}
-                                </h3>
-                                <p className="text-[9px] leading-[12px] md:text-base md:leading-[21px] font-normal text-[#3B414D]">
-                                    {feature.description}
-                                </p>
-                            </div>
                             <Image
                                 src={feature.icon}
                                 alt={feature.title}
                                 className="w-[140px] mx-auto mt-1 md:mt-4"
                             />
+                            <div>
+                                <h3 className="text-[15px] leading-[18px] md:text-[24px] md:leading-[30px] font-bold mb-2">
+                                    {feature.title}
+                                </h3>
+                                <p className="text-[14px] leading-[16px] md:text-base md:leading-[21px] font-normal text-[#3B414D]">
+                                    {feature.description}
+                                </p>
+                            </div>
                         </div>
                     ))}
                 </div>

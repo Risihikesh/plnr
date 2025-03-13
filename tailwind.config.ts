@@ -12,7 +12,8 @@ export default {
             screens: {
                 xxs: "375px",
                 xs: "475px",
-                x: "1100px", 
+                x: "1100px",
+                xx: "1140px",
                 xll: "1450px",
             },
             colors: {

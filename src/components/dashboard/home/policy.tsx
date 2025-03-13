@@ -28,9 +28,9 @@ const Policy = () => {
                   and the leading features in your insurance plan.
               </p>
 
-              <div className="mt-[32px] md:mt-[100px] flex flex-col md:flex-row justify-center items-center gap-[10px] xl:gap-[20px] bg-transparent md:bg-white bg-none rounded-lg md:py-[8px] md:px-[15px] p-0 border-none md:border-[1px] border-[#DDDDDD] pb-[100px] md:pb-auto">
+              <div className="mt-[32px] md:mt-[100px] flex flex-col md:flex-row md:h-[70px] justify-center items-center gap-[10px] xl:gap-[15px] bg-transparent md:bg-white bg-none rounded-lg md:py-[8px] md:px-[10px] md:pl-[20px] p-0 border-none md:border-[1px] border-[#DDDDDD] pb-[100px] md:pb-auto">
                   <Select>
-                      <SelectTrigger className="outline-none ring-0 bg-white md:bg-transparent py-[24px] px-[20px] md:px-0 md:py-0 border-none shadow-none text-[16px] lg:text-[18px] xl:text-[24px] leading-[18px] font-medium focus:ring-0 justify-between md:justify-start gap-[20px] lg:gap-[40px] xl:gap-[60px] w-full lg:w-fit">
+                      <SelectTrigger className="outline-none ring-0 bg-white md:bg-transparent py-[24px] px-[20px] md:px-0 md:py-0 border-none shadow-none text-[16px] lg:text-[18px] leading-[18px] font-medium focus:ring-0 justify-between md:justify-start gap-[20px] lg:gap-[40px] w-full lg:w-fit">
                           <SelectValue placeholder="Select Product" />
                       </SelectTrigger>
                       <SelectContent className="p-[11px] gap-[10px] w-full lg:w-fit">
@@ -58,7 +58,7 @@ const Policy = () => {
                       className="hidden lg:block"
                       xmlns="http://www.w3.org/2000/svg"
                       width="2"
-                      height="72"
+                      height="52"
                       viewBox="0 0 2 72"
                       fill="none"
                   >
@@ -70,7 +70,7 @@ const Policy = () => {
                       />
                   </svg>
                   <Select>
-                      <SelectTrigger className="outline-none text-[#818181] ring-0 bg-white md:bg-transparent py-[24px] px-[20px] md:px-0 md:py-0 border-none shadow-none text-[16px] lg:text-[20px] xl:text-[24px] leading-[24px] font-medium focus:ring-0 justify-between md:justify-start gap-[20px] lg:gap-[40px] xl:gap-[60px] w-full lg:w-fit">
+                      <SelectTrigger className="outline-none text-[#818181] ring-0 bg-white md:bg-transparent py-[24px] px-[20px] md:px-0 md:py-0 border-none shadow-none text-[16px] lg:text-[18px] leading-[18px] font-medium focus:ring-0 justify-between md:justify-start gap-[20px] lg:gap-[40px] w-full lg:w-fit">
                           <SelectValue placeholder="Select Insurer" />
                       </SelectTrigger>
                       <SelectContent className="p-[11px] gap-[10px]">
@@ -98,7 +98,7 @@ const Policy = () => {
                       className="hidden lg:block"
                       xmlns="http://www.w3.org/2000/svg"
                       width="2"
-                      height="72"
+                      height="52"
                       viewBox="0 0 2 72"
                       fill="none"
                   >
@@ -110,7 +110,7 @@ const Policy = () => {
                       />
                   </svg>
                   <Select>
-                      <SelectTrigger className="outline-none text-[#818181] ring-0 bg-white md:bg-transparent py-[24px] px-[20px] md:px-0 md:py-0 border-none shadow-none text-[16px] lg:text-[20px] xl:text-[24px] leading-[24px] font-medium focus:ring-0 justify-between md:justify-start gap-[20px] lg:gap-[40px] xl:gap-[60px] w-full lg:w-fit">
+                      <SelectTrigger className="outline-none text-[#818181] ring-0 bg-white md:bg-transparent py-[24px] px-[20px] md:px-0 md:py-0 border-none shadow-none text-[16px] lg:text-[18px] leading-[18px] font-medium focus:ring-0 justify-between md:justify-start gap-[20px] lg:gap-[40px] w-full lg:w-fit">
                           <SelectValue placeholder="Select the policy" />
                       </SelectTrigger>
                       <SelectContent className="p-[11px] gap-[10px]">
@@ -136,7 +136,7 @@ const Policy = () => {
                   </Select>
 
                   <Link href="/details" className="w-full md:w-fit">
-                      <button className="mt-[46px] md:mt-0 md:ml-4 ml-0 bg-primary text-white hover:bg-transparent hover:outline hover:outline-2 hover:outline-primary hover:text-primary border rounded-md px-[40px] py-[18px] transition md:w-auto w-[90%] font-semibold whitespace-nowrap">
+                      <button className="mt-[46px] md:mt-0 md:ml-4 ml-0 bg-primary text-white hover:bg-transparent hover:outline hover:outline-2 hover:outline-primary hover:text-primary border rounded-md px-[40px] py-[12px] transition md:w-auto w-[90%] font-semibold whitespace-nowrap">
                           Check Now
                       </button>
                   </Link>

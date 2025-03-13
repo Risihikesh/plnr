@@ -14,7 +14,7 @@ const featureData = {
         },
         {
             price: "Rs. 6,000",
-            button: "Second Year Onwards",
+            button: "2nd Year Onwards",
         },
     ],
     items: [
@@ -82,7 +82,7 @@ const Services = () => {
                 </div>
             </div>
 
-            <div className="relative z-2 w-full lg:pt-[50px]">
+            <div className="relative z-2 w-full lg:pt-[20px]">
                 <div
                     className="ml-auto bg-white shadow-lg mr-0 lg:mr-[30px] xl:mr-[100px] w-full py-[28px] md:py-[36px] px-[15px] sm:px-[47px]
                 lg:w-[51%] text-gray-800 rounded-lg flex flex-col gap-[28px] md:gap-[35px]"
@@ -95,13 +95,13 @@ const Services = () => {
                         at a&nbsp;
                         <span className="font-bold">Flat Fixed Fee</span>
                     </h3>
-                    <div className="flex items-center gap-[39px] x:gap-[100px] xll:gap-[183px] ">
+                    <div className="flex items-center justify-between sm:justify-start gap-2 xs:gap-[39px] x:gap-[100px] xll:gap-[183px] ">
                         {featureData.buttons.map((feature, index) => (
-                            <div key={index} className="flex flex-col">
+                            <div key={index} className="flex flex-col items-center">
                                 <h1 className="flex items-start mb-[5px] md:mb-[8px] xl:mb-[12px] text-[24px] lg:text-[30px] xl:text-[40px] leading-[36px] md:leading-[60px] font-[700] text-[#00638D] whitespace-nowrap cursor-default">
                                     {feature.price}
                                 </h1>
-                                <button className="border-2 border-[#2AA4F4] font-medium text-[12px] leading-[25px] lg:text-[14px] lg:leading-[28px] px-[20px] lg:px-[40px] rounded-full whitespace-nowrap ml-[-5px]">
+                                <button className="min-w-[150px] xs:min-w-[170px] min-h-[40px] border-[1px] border-[#2AA4F4] font-semibold leading-[20px] text-[14px] lg:leading-[28px] px-[16px] py-[6px] lg:px-[40px] rounded-full whitespace-nowrap ml-[-5px]">
                                     {feature.button}
                                 </button>
                             </div>
@@ -124,7 +124,7 @@ const Services = () => {
                                     <h4 className="font-[600] text-[16px] leading-[24px] md:text-[18px] md:leading-[27px] text-black">
                                         {item.title}
                                     </h4>
-                                    <p className="text-[13px] leading-[20px] md:text-[16px] md:leading-[24px] text-[#3B414D]">
+                                    <p className="text-[16px] leading-[20px] md:text-[16px] md:leading-[24px] text-[#3B414D]">
                                         {item.description}
                                     </p>
                                 </div>
