@@ -146,7 +146,7 @@ const Policy = () => {
                   <Image
                       src={Understandthepolicyimg}
                       alt="Policy Illustration"
-                      className="w-72 sm:w-96"
+                      className="w-72 lg:w-56 sm:w-96"
                   />
               </div>
           </div>

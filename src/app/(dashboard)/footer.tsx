@@ -98,19 +98,19 @@ const Footer = () => {
                                 <div className="flex flex-col gap-y-2 font-light text-sm">
                                     <Link
                                         href="/about"
-                                        className="text-[16px] leading-[24px]"
+                                        className="text-[14px] leading-[24px]"
                                     >
                                         The Team
                                     </Link>
                                     <Link
                                         href="/"
-                                        className="text-[16px] leading-[24px]"
+                                        className="text-[14px] leading-[24px]"
                                     >
                                         Terms and Conditions
                                     </Link>
                                     <Link
                                         href="/"
-                                        className="text-[16px] leading-[24px]"
+                                        className="text-[14px] leading-[24px]"
                                     >
                                         Privacy Policy
                                     </Link>
@@ -127,25 +127,25 @@ const Footer = () => {
                                 <div className="flex flex-col gap-y-2 font-light text-sm">
                                     <Link
                                         href="/blog"
-                                        className="text-[16px] leading-[24px]"
+                                        className="text-[14px] leading-[24px]"
                                     >
                                         Blog
                                     </Link>
                                     <Link
                                         href="/"
-                                        className="text-[16px] leading-[24px]"
+                                        className="text-[14px] leading-[24px]"
                                     >
                                         Calculators
                                     </Link>
                                     <Link
                                         href="/details"
-                                        className="text-[16px] leading-[24px]"
+                                        className="text-[14px] leading-[24px]"
                                     >
                                         Sample Financial Plan
                                     </Link>
                                     <Link
                                         href="/services"
-                                        className="text-[16px] leading-[24px]"
+                                        className="text-[14px] leading-[24px]"
                                     >
                                         Services
                                     </Link>
@@ -162,25 +162,25 @@ const Footer = () => {
                                 <div className="flex flex-col gap-y-2 font-light text-sm">
                                     <div
                                         onClick={() => setIsVisible(true)}
-                                        className="text-[16px] leading-[24px] cursor-pointer"
+                                        className="text-[14px] leading-[24px] cursor-pointer"
                                     >
                                         Regulatory Disclosures
                                     </div>
                                     <Link
                                         href="/disclosures"
-                                        className="text-[16px] leading-[24px]"
+                                        className="text-[14px] leading-[24px]"
                                     >
                                         SEBI Disclosures
                                     </Link>
                                     <Link
                                         href="/investor"
-                                        className="text-[16px] leading-[24px]"
+                                        className="text-[14px] leading-[24px]"
                                     >
                                         Investor Charter
                                     </Link>
                                     <Link
                                         href="/grievance"
-                                        className="text-[16px] leading-[24px]"
+                                        className="text-[14px] leading-[24px]"
                                     >
                                         Grievance Redressal/Escalation Matrix
                                     </Link>
@@ -200,7 +200,7 @@ const Footer = () => {
                                             src={Footermailicon}
                                             alt="no-mail-icon"
                                         />
-                                        <p className="text-[16px] leading-[24px]">
+                                        <p className="text-[14px] leading-[24px]">
                                             support@plnr.in
                                         </p>
                                     </div>
@@ -209,7 +209,7 @@ const Footer = () => {
                                             src={Footercallicon}
                                             alt="no-call-icon"
                                         />
-                                        <p className="text-[16px] leading-[24px]">
+                                        <p className="text-[14px] leading-[24px]">
                                             +91 8860000332
                                         </p>
                                     </div>
@@ -218,21 +218,21 @@ const Footer = () => {
                                             src={Footerlocationicon}
                                             alt="no-mail-icon"
                                         />
-                                        <p className="text-[16px] leading-[24px]">
+                                        <p className="text-[14px] leading-[24px]">
                                             {" "}
                                             Shop No. 2, 1st Floor, Tulip
                                         </p>
                                     </div>
-                                    <p className="text-[16px] leading-[24px]">
+                                    <p className="text-[14px] leading-[24px]">
                                         Plaza,
                                     </p>
-                                    <p className="text-[16px] leading-[24px]">
+                                    <p className="text-[14px] leading-[24px]">
                                         Plot No. 114, Sector 13,
                                     </p>
-                                    <p className="text-[16px] leading-[24px]">
+                                    <p className="text-[14px] leading-[24px]">
                                         Kharghar
                                     </p>
-                                    <p className="text-[16px] leading-[24px]">
+                                    <p className="text-[14px] leading-[24px]">
                                         Navi Mumbai-410210
                                     </p>
                                 </div>
@@ -241,7 +241,7 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col gap-y-4 md:gap-y-10 pb-4 w-[98%] md:w-[95%]">
-                        <p className="font-medium text-base">
+                        <p className="font-medium text-sm">
                             Name of Advisor : PLNR INVESTMENT ADVISORS | SEBI
                             Registration Number - INA000018966 | Registration
                             Type : Non-Individual

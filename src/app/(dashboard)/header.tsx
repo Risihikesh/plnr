@@ -36,19 +36,19 @@ const Header = () => {
               <div className="m-auto bg-[#E6EDF9] flex items-center md:ml-8 ml-2 mr-2 rounded-bl-lg rounded-br-lg text-[12px] leading-[20px] font-medium overflow-hidden">
                   <Link
                       href="/services"
-                      className="min-w-[50px] whitespace-nowrap text-center md:py-[14px] md:px-[32px] p-[8px] hover:bg-primary hover:text-white"
+                      className="min-w-[50px] whitespace-nowrap text-center md:py-[14px] md:px-[16px] p-[8px] hover:bg-primary hover:text-white"
                   >
                       What we do
                   </Link>
                   <Link
                       href="/getstarted"
-                      className="min-w-[50px] whitespace-nowrap text-center md:py-[14px] md:px-[32px] p-[8px] hover:bg-primary hover:text-white"
+                      className="min-w-[50px] whitespace-nowrap text-center md:py-[14px] md:px-[16px] p-[8px] hover:bg-primary hover:text-white"
                   >
                       How we do
                   </Link>
                   <Link
                       href="/blog"
-                      className="min-w-[50px] whitespace-nowrap text-center md:py-[14px] md:px-[32px] p-[8px] hover:bg-primary hover:text-white"
+                      className="min-w-[50px] whitespace-nowrap text-center md:py-[14px] md:px-[16px] p-[8px] hover:bg-primary hover:text-white"
                   >
                       DIY
                   </Link>
@@ -103,9 +103,9 @@ const Header = () => {
                   </div>
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex gap-3 lg-scale-90">
                   <div
-                      className="h-10 w-10 bg-[#2AA4F4] flex items-center justify-center rounded-md border border-[#0898E1] hover:bg-white hover:text-primary hover:outline-2 hover:outline-primary hover:outline group"
+                      className="h-8 w-8 bg-[#2AA4F4] flex items-center justify-center rounded-md border border-[#0898E1] hover:bg-white hover:text-primary hover:outline-2 hover:outline-primary hover:outline group"
                       onClick={() => {
                           router.push("/contactus");
                       }}
@@ -126,7 +126,7 @@ const Header = () => {
                           />
                       </svg>
                   </div>
-                  <div className="p-2 text-[#0898E1] font-semibold border border-[#0898E1] hover:bg-primary hover:text-white rounded-md h-10 w-20 flex items-center justify-center disabled:cursor-not-allowed">
+                  <div className="p-2 text-[#0898E1] font-semibold border border-[#0898E1] hover:bg-primary hover:text-white rounded-md h-8 w-20 flex items-center justify-center disabled:cursor-not-allowed">
                       <Link href="/signin">Log In</Link>
                   </div>
               </div>

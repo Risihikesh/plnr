@@ -96,7 +96,7 @@ export function ActionButtons() {
         <button
           onClick={() =>
             openWhatsApp(
-              "+918850000332",
+              "+918860000332",
               "Hi there! I would like to know more about your services."
             )
           }

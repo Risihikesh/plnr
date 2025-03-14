@@ -30,7 +30,7 @@ const PricingFeature: React.FC<PricingFeatureProps> = ({ title, description }) =
 
 const PricingCard: React.FC<PricingCardProps> = ({ price, yearLabel, features, buttonText }) => {
     return (
-        <div className="border-2 border-[#00638D] rounded-lg p-3 sm:p-6 shadow-lg bg-white max-w-[35rem] w-full  overflow-hidden">
+        <div className="border border-black rounded-lg p-3 sm:p-6 shadow-lg bg-white max-w-[35rem] w-full  overflow-hidden">
             <h2 className="text-[32px] font-semibold text-[#065374] mb-[8px]">Rs {price}</h2>
             <button className="text-black border-2 border-[#2AA4F4]  font-medium my-[16px] text-[14px] leading-[28px] tracking-[0.2px] py-[4px] px-[40px] rounded-full">
                 {yearLabel}

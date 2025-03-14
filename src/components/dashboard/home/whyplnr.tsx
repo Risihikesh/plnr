@@ -11,7 +11,7 @@ const WhyPlnr = () => {
         {
             title: "Fee-Only",
             description:
-                "We charge around 50% less fee than our counterparts in the financial industry. Compensated only with the fee clients pay directly, not earning commissions by any means.",
+                "Compensated only with the fee clients pay directly, not earning commissions by any means.",
             icon: Icon1,
         },
         {
@@ -60,18 +60,20 @@ const WhyPlnr = () => {
                     success.
                 </p>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-[10px] xs:gap-[16px] md:gap-6">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-[10px] xs:gap-[16px] md:gap-6 items-stretch">
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="w-fit bg-white text-gray-800 rounded-lg shadow-lg p-2 md:p-6 flex flex-col gap-[16px] items-center transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-blue-50 cursor-default max-w-[350px]"
+                            className="w-full bg-white text-gray-800 rounded-lg shadow-lg p-2 md:p-6 flex flex-col gap-[16px] items-center justify-between h-full transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-blue-50 cursor-default max-w-[350px]"
                         >
-                            <Image
-                                src={feature.icon}
-                                alt={feature.title}
-                                className="w-[140px] mx-auto mt-1 md:mt-4"
-                            />
-                            <div>
+                            <div className="w-full flex justify-center">
+                                <Image
+                                    src={feature.icon}
+                                    alt={feature.title}
+                                    className="w-[140px] h-[140px] object-contain"
+                                />
+                            </div>
+                            <div className="flex flex-col items-center text-center flex-grow">
                                 <h3 className="text-[15px] leading-[18px] md:text-[24px] md:leading-[30px] font-bold mb-2">
                                     {feature.title}
                                 </h3>
@@ -82,6 +84,7 @@ const WhyPlnr = () => {
                         </div>
                     ))}
                 </div>
+
             </div>
         </section>
     );

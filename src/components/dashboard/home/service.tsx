@@ -97,7 +97,7 @@ const Services = () => {
                     </h3>
                     <div className="flex items-center justify-between sm:justify-start gap-2 xs:gap-[39px] x:gap-[100px] xll:gap-[183px] ">
                         {featureData.buttons.map((feature, index) => (
-                            <div key={index} className="flex flex-col items-center">
+                            <div key={index} className="flex w-[50%] flex-col items-center">
                                 <h1 className="flex items-start mb-[5px] md:mb-[8px] xl:mb-[12px] text-[24px] lg:text-[30px] xl:text-[40px] leading-[36px] md:leading-[60px] font-[700] text-[#00638D] whitespace-nowrap cursor-default">
                                     {feature.price}
                                 </h1>
@@ -124,7 +124,7 @@ const Services = () => {
                                     <h4 className="font-[600] text-[16px] leading-[24px] md:text-[18px] md:leading-[27px] text-black">
                                         {item.title}
                                     </h4>
-                                    <p className="text-[16px] leading-[20px] md:text-[16px] md:leading-[24px] text-[#3B414D]">
+                                    <p className="text-[16px] lg:font-medium leading-[20px] md:text-[16px] md:leading-[24px] text-[#3B414D]">
                                         {item.description}
                                     </p>
                                 </div>
@@ -132,9 +132,9 @@ const Services = () => {
                         ))}
                     </div>
 
-                    <div className="flex flex-col lg:flex-row  lg:justify-between gap-[20px] sm:flex-row sm:space-x-4 w-full">
-                        <FreecallButton />
-                        <WhatsappButton />
+                    <div className="flex flex-col lg:flex-row lg:justify-between gap-[20px] sm:flex-row sm:space-x-4 w-full">
+                        <div className="w-[50%] flex lg:items-center justify-center text-center"><FreecallButton /></div>
+                        <div className="w-[50%] flex lg:items-center justify-center text-center"><WhatsappButton /></div>
                     </div>
                 </div>
             </div>

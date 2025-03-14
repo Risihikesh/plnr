@@ -40,7 +40,7 @@ export const pricingData = {
     },
     {
       price: "6,000",
-      yearLabel: "Second Year Onwards",
+      yearLabel: "2nd Year Onwards",
       features: [
         {
           title: "Plan Review",

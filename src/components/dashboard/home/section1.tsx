@@ -98,7 +98,7 @@ const Home = () => {
                             {displayText}
                         </span>
                     </p>
-                    <p className="text-[18px] leading-[22px] md:leading-[28.29px] lg:font-normal font-normal text-[#13171F] mt-1">
+                    <p className="text-[18px] leading-[22px] md:leading-[28.29px] lg:font-medium font-normal text-[#13171F] mt-1">
                         With PLNR, you get unbiased advice for your personal
                         finances. Clean up your portfolio,choose the right
                         financial product with tax efficiency, get a second
