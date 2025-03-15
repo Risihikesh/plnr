@@ -102,7 +102,7 @@ const Home = () => {
                         With PLNR, you get unbiased advice for your personal
                         finances. Clean up your portfolio,choose the right
                         financial product with tax efficiency, get a second
-                        opinion about yourinvestments, get advice on health and
+                        opinion about your investments, get advice on health and
                         term insurance, define your goals and a way to achieve
                         them with proper equity/debt allocation, all in the same
                         place.
@@ -121,7 +121,7 @@ const Home = () => {
                 <Image
                     src={Homeimg}
                     alt="no-img"
-                    className="w-full lg:h-[387px] md:w-[70%] lg:w-[50%] max-w-[700px] min-w-[50%] lg:min-w-[40%]"
+                    className="w-full lg:h-[387px] md:w-[70%] lg:w-[50%] max-w-[700px] min-w-[50%] lg:min-w-[39%]"
                 />
             </div>
         </>

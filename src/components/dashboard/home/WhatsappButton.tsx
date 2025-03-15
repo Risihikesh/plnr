@@ -6,13 +6,35 @@ import React from "react";
 const WhatsappButton = ({ disabled }: { disabled?: boolean }) => {
 
     const router = useRouter();
+    const phoneNumber = "+918860000332"; 
+    const message = "Hi there! I would like to know more about your services."; 
+
+    const openWhatsApp = (phoneNumber: string, message: string) => {
+        const encodedMessage = encodeURIComponent(message);
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        const webUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+        const mobileUrl = `whatsapp://send?phone=${phoneNumber}&text=${encodedMessage}`;
+
+        if (isMobile) {
+            window.location.href = mobileUrl;
+            setTimeout(() => {
+                if (document.hasFocus()) {
+                    window.location.href = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
+                }
+            }, 1000);
+        } else {
+            window.open(webUrl, "_blank");
+        }
+    };
     
     return (
         <button
             className="sm:w-fit w-full flex bg-[#25D366] hover:bg-white hover:text-[#25D366] active:bg-[#09B349] border-2 border-transparent hover:border-[#25D366] py-[10px] sm:px-[20px] lg:px-[48px] rounded-md text-white font-semibold gap-2 justify-center items-center cursor-pointer group disabled:bg-[#E5E7EB] disabled:cursor-not-allowed disabled:text-[#A2A7B3] disabled:hover:border-transparent"
-            onClick={() => {
-                router.push("/contactus");
-            }}
+            // client wants the WhatsApp to open directly without redirecting to the contactus page
+            // onClick={() => {
+            //     router.push("/contactus");
+            // }}
+            onClick={() => openWhatsApp(phoneNumber, message)}
             disabled={disabled}
         >
             <svg
