@@ -133,8 +133,8 @@ const Services = () => {
                     </div>
 
                     <div className="flex flex-col lg:flex-row lg:justify-between gap-[20px] sm:flex-row sm:space-x-4 w-full">
-                        <div className="w-[50%] flex lg:items-center justify-center text-center"><FreecallButton /></div>
-                        <div className="w-[50%] flex lg:items-center justify-center text-center"><WhatsappButton /></div>
+                        <div className="w-full sm:w-[50%] flex sm:items-center lg:items-center justify-center text-center"><FreecallButton /></div>
+                        <div className="w-full sm:w-[50%] flex sm:items-center lg:items-center justify-center text-center"><WhatsappButton /></div>
                     </div>
                 </div>
             </div>
