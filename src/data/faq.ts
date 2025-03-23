@@ -1,21 +1,21 @@
 export type TabItem = {
     title: string;
     value: string;
-  }
-  
-  export type FAQItem = {
+    // faqItems?: FAQItem[];
+};
+
+export type FAQItem = {
     question: string;
     answer: string;
-  }
-  
-  export const tabItems: TabItem[] = [
+};
+export const tabItems: TabItem[] = [
     { title: "Fee", value: "fee" },
     { title: "Information", value: "information" },
     { title: "Meeting", value: "meeting" },
     { title: "Financial Planning", value: "financial-planning" },
     { title: "Miscellaneous", value: "miscellaneous" },
   ];
-  
+
   export const faqItems: FAQItem[] = [
     {
       question: "Are you Robo advisors?",
@@ -54,5 +54,3 @@ export type TabItem = {
       answer: "While self-research is valuable, our expertise provides professional insights, saves time, and helps avoid costly mistakes."
     }
   ];
-  
-  

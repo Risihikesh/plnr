@@ -33,29 +33,34 @@ const Header = () => {
   return (
       <div className="flex flex-col gap-y-1 shadow-[0px_8px_24px_0px_rgba(149,157,165,0.20)]">
           <div className="flex items-start justify-center sm:justify-start">
-              <div className="m-auto bg-[#E6EDF9] flex items-center md:ml-8 ml-2 mr-2 rounded-bl-lg rounded-br-lg text-[12px] leading-[20px] font-medium overflow-hidden">
+              <div className="m-auto bg-[#E6EDF9] flex items-center md:ml-6 ml-2 mr-2 rounded-bl-lg rounded-br-lg text-[12px] leading-[20px] font-medium overflow-hidden">
                   <Link
                       href="/services"
-                      className="min-w-[50px] whitespace-nowrap text-center md:py-[14px] md:px-[16px] p-[8px] hover:bg-primary hover:text-white"
-                  >
+                      className={`min-w-[50px] whitespace-nowrap text-center md:py-[8px] md:px-[10px] p-[8px] hover:bg-primary hover:text-white ${
+                        pathname === "/home" || pathname === "/services" ? "bg-primary text-white" : ""
+                      }`}
+                    >
                       What we do
                   </Link>
                   <Link
                       href="/getstarted"
-                      className="min-w-[50px] whitespace-nowrap text-center md:py-[14px] md:px-[16px] p-[8px] hover:bg-primary hover:text-white"
-                  >
+                      className={`min-w-[50px] whitespace-nowrap text-center md:py-[8px] md:px-[10px] p-[8px] hover:bg-primary hover:text-white ${
+                        pathname === "/getstarted" ? "bg-primary text-white" : ""
+                      }`}                  >
                       How we do
                   </Link>
                   <Link
                       href="/blog"
-                      className="min-w-[50px] whitespace-nowrap text-center md:py-[14px] md:px-[16px] p-[8px] hover:bg-primary hover:text-white"
-                  >
+                      className={`min-w-[50px] whitespace-nowrap text-center md:py-[8px] md:px-[10px] p-[8px] hover:bg-primary hover:text-white ${
+                        pathname === "/blog" ? "bg-primary text-white" : ""
+                      }`}                  >
                       DIY
                   </Link>
                   <Link
                       href="/contactus"
-                      className="min-w-[50px] whitespace-nowrap text-center md:py-[14px] md:px-[32px] p-[8px] hover:bg-primary hover:text-white"
-                  >
+                      className={`min-w-[50px] whitespace-nowrap text-center md:py-[8px] md:px-[10px] p-[8px] hover:bg-primary hover:text-white ${
+                        pathname === "/contactus" ? "bg-primary text-white" : ""
+                      }`}                  >
                       Contact us
                   </Link>
               </div>
@@ -127,7 +132,7 @@ const Header = () => {
                       </svg>
                   </div>
                   <div className="p-2 text-[#0898E1] font-semibold border border-[#0898E1] hover:bg-primary hover:text-white rounded-md h-8 w-20 flex items-center justify-center disabled:cursor-not-allowed">
-                      <Link href="/signin">Log In</Link>
+                      <Link href="/signin">LogIn</Link>
                   </div>
               </div>
           </div>

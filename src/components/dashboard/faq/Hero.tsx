@@ -4,7 +4,7 @@ import bg from "@/Assets/Dashboard/hero/faqbg.svg";
 
 function Hero() {
   return (
-    <div className="relative h-[400px] w-[412px] md:h-[420px] md:w-full text-white flex flex-col items-center m-auto gap-[11px]">
+    <div className="relative h-[276px] md:h-[222px] w-full text-white flex flex-col items-center m-auto gap-[11px]">
       <div className="absolute inset-0 z-0">
         <Image
           src={bg}

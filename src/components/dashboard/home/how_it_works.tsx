@@ -62,14 +62,14 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <div
               key={index}
-              className="p-2 md:p-4 flex flex-col gap-[9px] md:gap-[14px] items-center text-center justify-start"
+              className="p-2 md:p-4 flex flex-col gap-[9px] md:gap-[14px] items-center text-center justify-start md:w-[200px]"
             >
               <Image
                 src={step.image}
                 alt={step.title}
                 className="h-[180px]"
               />
-              <h3 className="text-[16px] leading-[21px] md:text-[24px] md:leading-[38px] font-semibold whitespace-nowrap">{step.title}</h3>
+              <h3 className="text-[16px] leading-[21px] md:text-[24px] md:leading-[38px] font-bold whitespace-nowrap">{step.title}</h3>
               <p className="text-gray-600 text-[14px] leading-[16px] md:text-[16px] md:leading-[24px]">{step.description}</p>
             </div>
           ))}

@@ -41,7 +41,7 @@ const featureData = {
         {
             title: "Insurance Advise",
             description:
-                "We suggest the amount required for a term insurance and health insurance and give opinion on existing policies—whether to continue or surrender.",
+                "We suggest the amount required for term insurance and health insurance and give opinion on existing policies—whether to continue or surrender.",
         },
         {
             title: "Timelines",
@@ -132,9 +132,9 @@ const Services = () => {
                         ))}
                     </div>
 
-                    <div className="flex flex-col lg:flex-row lg:justify-between gap-[20px] sm:flex-row sm:space-x-4 w-full">
-                        <div className="w-full sm:w-[50%] flex sm:items-center lg:items-center justify-center text-center"><FreecallButton /></div>
-                        <div className="w-full sm:w-[50%] flex sm:items-center lg:items-center justify-center text-center"><WhatsappButton /></div>
+                    <div className="flex flex-row lg:flex-row lg:justify-between gap-[20px] sm:flex-row sm:space-x-4 w-full">
+                        <div className="w-full  flex sm:items-center lg:items-center justify-center text-center"><FreecallButton /></div>
+                        <div className="w-full  flex sm:items-center lg:items-center justify-center text-center"><WhatsappButton /></div>
                     </div>
                 </div>
             </div>

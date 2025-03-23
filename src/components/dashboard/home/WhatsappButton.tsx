@@ -29,7 +29,7 @@ const WhatsappButton = ({ disabled }: { disabled?: boolean }) => {
     
     return (
         <button
-            className="sm:w-fit w-full flex bg-[#25D366] hover:bg-white hover:text-[#25D366] active:bg-[#09B349] border-2 border-transparent hover:border-[#25D366] py-[10px] sm:px-[20px] lg:px-[48px] rounded-md text-white font-semibold gap-2 justify-center items-center cursor-pointer group disabled:bg-[#E5E7EB] disabled:cursor-not-allowed disabled:text-[#A2A7B3] disabled:hover:border-transparent"
+            className="w-[180px]  lg:w-[180px] flex bg-[#25D366] hover:bg-white hover:text-[#25D366] active:bg-[#09B349] border border-transparent hover:border-[#25D366] py-[10px] sm:px-[20px] lg:px-[22px] rounded-md text-white font-semibold gap-2 justify-center items-center cursor-pointer group disabled:bg-[#E5E7EB] disabled:cursor-not-allowed disabled:text-[#A2A7B3] disabled:hover:border-transparent"
             // client wants the WhatsApp to open directly without redirecting to the contactus page
             // onClick={() => {
             //     router.push("/contactus");
@@ -49,7 +49,7 @@ const WhatsappButton = ({ disabled }: { disabled?: boolean }) => {
                 />
             </svg>
 
-            <p className="text-[18px] leading-[30px]">Whatsapp</p>
+            <p className="text-[16px] leading-[30px]">WhatsApp</p>
         </button>
     );
 };

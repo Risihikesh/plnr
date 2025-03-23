@@ -2,8 +2,6 @@
 import Image from "next/image";
 import Homeimg from "@/Assets/home/home_img.svg";
 import Playbuttonimg from "@/Assets/home/play_button_img.svg";
-import Footerbuttoncallicon from "@/Assets/footer/footer_button_call_icon.svg";
-import Footerbuttonwhatsappicon from "@/Assets/footer/footer_button_whatsapp_icon.svg";
 import { useState, useEffect } from "react";
 import WhatsappButton from "./WhatsappButton";
 import FreecallButton from "./FreecallButton";
@@ -24,8 +22,8 @@ const Home = () => {
     
     
     const rotatingTexts = [
-        "SEBI registered",
-        "No product selling",
+        "SEBI Registered",
+        "No Product Selling",
         "Fixed Fee - Rs. 13000/-",
         "15 Years of Experience",
     ];
@@ -107,13 +105,13 @@ const Home = () => {
                         them with proper equity/debt allocation, all in the same
                         place.
                     </p>
-                    <div className="flex p-2 border m-auto sm:m-0 border-[#00587A] rounded-3xl justify-center items-center w-[276px] cursor-pointer hover:shadow-lg hover:scale-105 hover:bg-[#E6F7FB] transition-all duration-300 ease-in-out">
+                    <div className="flex p-2 border m-auto sm:m-0 border-[#2AA4F4] rounded-3xl justify-center items-center w-[276px] cursor-pointer hover:shadow-lg hover:scale-105 hover:bg-[#E6F7FB] transition-all duration-300 ease-in-out">
                         <Image src={Playbuttonimg} alt="no-img" />
                         <p className="text-[#00587A] font-semibold underline">
                             Mentor's Testimonial
                         </p>
                     </div>
-                    <div className="flex flex-col md:flex-row items-center justify-start gap-5 w-full">
+                    <div className="flex flex-row justify-center md:flex-row items-center md:justify-start gap-5 w-full">
                         <FreecallButton />
                         <WhatsappButton />
                     </div>
@@ -121,7 +119,7 @@ const Home = () => {
                 <Image
                     src={Homeimg}
                     alt="no-img"
-                    className="w-full lg:h-[387px] md:w-[70%] lg:w-[50%] max-w-[700px] min-w-[50%] lg:min-w-[39%]"
+                    className="w-full lg:h-[387px] md:w-[70%] lg:w-[50%] max-w-[700px] min-w-[50%] lg:min-w-[40%]"
                 />
             </div>
         </>

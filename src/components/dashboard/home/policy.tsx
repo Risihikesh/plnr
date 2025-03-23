@@ -22,7 +22,7 @@ const Policy = () => {
                   Understand Your&nbsp;
                   <span className="font-bold block sm:inline">Policy</span>
               </h1>
-              <p className="text-sm sm:text-base leading-[21px] md:text-xs text-gray-500 max-w-xl mx-auto">
+              <p className="text-normal sm:text-base leading-[24px] md:text-normal text-gray-500 max-w-xl mx-auto">
                   Understand what your policy has to offer. Read terms and
                   conditions in plain English. And discover the good, the bad,
                   and the leading features in your insurance plan.

@@ -11,7 +11,7 @@ const FreecallButton = ({ disabled }: {
     
     return (
         <button
-            className="sm:w-fit w-full flex bg-[#0898E1] active:bg-[#0281C1] active:text-white py-[10px] sm:px-[20px] lg:px-[48px] rounded-md text-white font-semibold gap-2 justify-center items-center cursor-pointer hover:bg-white border-2 border-transparent hover:border-primary hover:text-primary group disabled:bg-[#E5E7EB] disabled:cursor-not-allowed disabled:text-[#A2A7B3] disabled:hover:border-transparent whitespace-nowrap"
+            className="w-[180px] lg:w-[180px] flex bg-[#0898E1] active:bg-[#0281C1] active:text-white py-[10px] sm:px-[20px] lg:px-[22px] rounded-md text-white font-semibold gap-2 justify-center items-center cursor-pointer hover:bg-white border border-transparent hover:border-primary hover:text-primary group disabled:bg-[#E5E7EB] disabled:cursor-not-allowed disabled:text-[#A2A7B3] disabled:hover:border-transparent whitespace-nowrap"
 
             // client wants the dialer to open directly without redirecting to the contactus page
             // onClick={() => {

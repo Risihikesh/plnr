@@ -131,12 +131,12 @@ const Footer = () => {
                                     >
                                         Blog
                                     </Link>
-                                    <Link
+                                    {/* <Link
                                         href="/"
                                         className="text-[14px] leading-[24px]"
                                     >
                                         Calculators
-                                    </Link>
+                                    </Link> */}
                                     <Link
                                         href="/details"
                                         className="text-[14px] leading-[24px]"
@@ -258,7 +258,7 @@ const Footer = () => {
                         </p>
                     </div>
                 </div>
-                <div className="md:hidden fixed bottom-0 left-0 bg-background flex p-2 px-4 items-center justify-center gap-2 w-full">
+                <div className="sm:hidden fixed bottom-0 left-0 bg-background flex p-2 px-4 items-center justify-center gap-2 w-full">
                     {/* <div className="flex bg-[#0898E1] py-3 px-6 rounded-lg text-white font-bold gap-2">
                   <Image src={Footerbuttoncallicon} alt="no-img" />
                   <p className=" whitespace-nowrap">Free Call</p>
