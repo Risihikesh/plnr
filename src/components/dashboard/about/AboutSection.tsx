@@ -4,8 +4,8 @@ const AboutSection = () => {
     return (
         <div className="">
             {/* Intro Section */}
-            <section className="pt-[29px] px-[16px] md:px-[180px] mx-auto text-[14px] md:text-[18px] text-[#13171F] leading-[25.65px] md:leading-[28px] gap-[20px] flex flex-col pb-[170px] ">
-                <p className="font-[300]">
+            <section className="pt-[29px] px-[16px] md:px-[180px] mx-auto text-[14px] md:text-[16px] text-[#13171F] leading-[24px] md:leading-[24px] gap-[20px] flex flex-col pb-[170px] ">
+                <p className="font-[400]">
                     Think financial planning and all you get is insurance
                     agents, mutual funds agents, and relationship managers
                     selling you the commission laded products without
@@ -15,9 +15,9 @@ const AboutSection = () => {
                     high flat fee or charge a percentage of assets under advice.
                 </p>
                 <h5 className="font-[400]">
-                    At PLNR, we`re challenging all that.
+                    At PLNR, we're challenging all that.
                 </h5>
-                <p className="font-[300]">
+                <p className="font-[400]">
                     We take care of risk profiling, goal planning, asset
                     allocation, product selection, tax efficiency, and
                     rebalancing, all at a very affordable fee. Plus, we take

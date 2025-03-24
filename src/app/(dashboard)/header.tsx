@@ -89,7 +89,7 @@ const Header = () => {
                       >
                           Help Links
                       </Link>
-                      <div
+                      {/* <div
                           onClick={() => {
                               document
                                   .getElementById("compare")
@@ -98,7 +98,13 @@ const Header = () => {
                           className="mx-[20px] border-b-[3px] border-transparent hover:border-[#00587a] cursor-pointer"
                       >
                           Compare
-                      </div>
+                      </div> */}
+                       <Link
+                          href="/details"
+                          className="mx-[20px] border-b-[3px] border-transparent hover:border-[#00587a] cursor-pointer"
+                      >
+                          Compare
+                      </Link>
                       <Link
                           href="/media"
                           className="mx-[20px] border-b-[3px] border-transparent hover:border-[#00587a] cursor-pointer"

@@ -40,9 +40,9 @@ export default function FAQSection() {
                                   value={`item-${index}`}
                               >
                                   <AccordionTrigger className="text-left">
-                                      <p className="text-left text-[18px] leading-[24px]">
+                                      <span className="text-left text-[18px] leading-[24px]">
                                           {item.question}
-                                      </p>
+                                      </span>
                                   </AccordionTrigger>
                                   <AccordionContent className="bg-[#F6FBFA] p-4 text-[18px]">
                                       <div

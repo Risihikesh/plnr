@@ -213,28 +213,32 @@ const Footer = () => {
                                             +91 8860000332
                                         </p>
                                     </div>
-                                    <div className="flex gap-2">
+                                    <div className="flex gap-2 relative">
                                         <Image
                                             src={Footerlocationicon}
-                                            alt="no-mail-icon"
+                                            alt="no-mail-icon" className="absolute top-0 left-0"
                                         />
-                                        <p className="text-[14px] leading-[24px]">
+                                        <p className="text-[14px] leading-[24px] pl-7">
                                             {" "}
-                                            Shop No. 2, 1st Floor, Tulip
+                                            Shop No. 2, 1st Floor, Tulip <br />
+                                            Plaza, <br />
+                                            Plot No. 114, Sector 13,<br />
+                                            Kharghar <br />
+                                            Navi Mumbai-410210
                                         </p>
                                     </div>
-                                    <p className="text-[14px] leading-[24px]">
-                                        Plaza,
+                                    {/* <p className="text-[14px] leading-[24px]">
+                                       
                                     </p>
                                     <p className="text-[14px] leading-[24px]">
-                                        Plot No. 114, Sector 13,
+                                        
                                     </p>
                                     <p className="text-[14px] leading-[24px]">
                                         Kharghar
                                     </p>
                                     <p className="text-[14px] leading-[24px]">
-                                        Navi Mumbai-410210
-                                    </p>
+                                        
+                                    </p> */}
                                 </div>
                             </div>
                         </div>
@@ -279,7 +283,7 @@ const Footer = () => {
                             setTimeLeft(7)
                         }}
                 >
-                    <div className="bg-white rounded-lg shadow-lg w-[100%] max-w-xl h-[85%] p-5 md:p-10 overflow-auto">
+                    <div className="bg-white rounded-lg shadow-lg w-[100%] max-w-xl h-[95%] p-5 md:p-10 overflow-auto">
                         <h2 className="text-[17px] md:text-[32px] font-bold text-center text-[#065374]">
                             Regulatory Disclosures
                         </h2>

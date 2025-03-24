@@ -1,4 +1,4 @@
-import Bg from '@/Assets/Dashboard/about/id-31-img.svg';
+import Bg from '@/Assets/Dashboard/about/grievance.svg';
 import BannerHeading from '@/components/custom_ui/BannerHeading';
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { grievanceData } from '@/data/grievance';

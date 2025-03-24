@@ -5,7 +5,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import { faqItems, tabItems } from "@/data/faq";
+import { tabItems } from "@/data/faq";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -22,7 +22,7 @@ export default function FAQSection() {
                         collapsible
                         className="w-full text-[18px] font-[400]"
                     >
-                        {faqItems.map((item, index) => (
+                        {tabItems[0].faqItems?.map((item, index) => (
                             <AccordionItem key={index} value={`item-${index}`}>
                                 <AccordionTrigger className="text-left">
                                     {item.question}
@@ -35,7 +35,7 @@ export default function FAQSection() {
                     </Accordion>
                 </div>
                 <Link href="/faq" className="fit-content m-auto md:m-0">
-                <Button variant={'outline'} className="text-primary w-fit font-semibold rounded-[4px] border-2 border-primary sm:m-0 m-auto px-[85px] sm:px-[36px] h-[50px] sm:h-[44px]">Check More FAQ</Button>
+                <Button variant={'outline'} className="text-primary w-fit font-semibold rounded-[4px] border border-primary sm:m-0 m-auto px-[85px] sm:px-[36px] h-[50px] sm:h-[44px]">Check More FAQ</Button>
                  </Link>
             </div>
         </div>
