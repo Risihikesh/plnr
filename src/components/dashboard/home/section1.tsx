@@ -119,7 +119,7 @@ const Home = () => {
                 <Image
                     src={Homeimg}
                     alt="no-img"
-                    className="w-full lg:h-[387px] md:w-[70%] lg:w-[50%] max-w-[700px] min-w-[50%] lg:min-w-[40%]"
+                    className="w-full lg:h-[387px] md:w-[70%] lg:w-[50%] max-w-[700px] min-w-[50%] lg:min-w-[42%]"
                 />
             </div>
         </>

@@ -64,7 +64,7 @@ const Services = () => {
                                 </span>
                                 <span> We Do </span> - Our Services
                             </h2>
-                            <p className="hidden sm:block text-white text-[16px] leading-[24px] font-normal cursor-default">
+                            <p className="hidden sm:block mt-[20px] text-white text-[16px] leading-[24px] font-normal cursor-default">
                                 We help you assess your current financial
                                 situation, establish financial goals and risk
                                 appetite, and devise an investment strategy to
