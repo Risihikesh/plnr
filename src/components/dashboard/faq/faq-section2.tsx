@@ -24,10 +24,10 @@ export default function FAQSection() {
                     >
                         {tabItems[0].faqItems?.map((item, index) => (
                             <AccordionItem key={index} value={`item-${index}`}>
-                                <AccordionTrigger className="text-left">
+                                <AccordionTrigger className="text-left text-[16px] leading-[24px] font-normal p-[12px]">
                                     {item.question}
                                 </AccordionTrigger>
-                                <AccordionContent className="bg-[#F6FBFA] p-4 text-[18px]">
+                                <AccordionContent className="bg-[#F6FBFA] text-[16px] leading-[24px] px-[23px] py-[30px]">
                                     {item.answer}
                                 </AccordionContent>
                             </AccordionItem>
@@ -35,8 +35,13 @@ export default function FAQSection() {
                     </Accordion>
                 </div>
                 <Link href="/faq" className="fit-content m-auto md:m-0">
-                <Button variant={'outline'} className="text-primary w-fit font-semibold rounded-[4px] border border-primary sm:m-0 m-auto px-[85px] sm:px-[36px] h-[50px] sm:h-[44px]">Check More FAQ</Button>
-                 </Link>
+                    <Button
+                        variant={"outline"}
+                        className="text-primary w-fit font-semibold rounded-[4px] border border-primary sm:m-0 m-auto px-[85px] sm:px-[36px] h-[50px] sm:h-[44px]"
+                    >
+                        Check More FAQ
+                    </Button>
+                </Link>
             </div>
         </div>
     );

@@ -41,11 +41,11 @@ const FAQPage: FC = () => {
                       <Accordion type="single" collapsible>
                           {faqContent.map((item) => (
                               <AccordionItem key={item.id} value={item.id}>
-                                  <AccordionTrigger className="text-left">
+                                  <AccordionTrigger className="text-left text-[16px] leading-[24px] font-normal p-[12px]">
                                       {item.question}
                                   </AccordionTrigger>
-                                  <AccordionContent>
-                                      <div className="p-4 bg-[#F6FBFA] text-[16px] leading-[24px]">
+                                  <AccordionContent className="bg-[#F6FBFA]">
+                                      <div className="text-[16px] leading-[24px] px-[23px] py-[30px]">
                                           {item.answer}
                                       </div>
                                   </AccordionContent>
@@ -60,7 +60,7 @@ const FAQPage: FC = () => {
                       key={tab.title}
                       value={tab.value}
                       className="space-y-6 flex flex-col"
-                      style={{ marginTop: `-${(index + 1) * 1}px` }}
+                      style={{ marginTop: `-${index * 0.5}px` }}
                   >
                       <h2 className="text-2xl font-extrabold mb-6 self-center m-auto">
                           {tab.title}
@@ -76,11 +76,12 @@ const FAQPage: FC = () => {
                                       key={index}
                                       value={`item-${index}`}
                                   >
-                                      <AccordionTrigger className="text-left">
+                                      <AccordionTrigger className="text-left text-[16px] leading-[24px] font-normal p-[12px]">
                                           {item.question}
                                       </AccordionTrigger>
-                                      <AccordionContent className="bg-[#F6FBFA] p-4 text-[16px] leading-[24px]">
+                                      <AccordionContent className="bg-[#F6FBFA]">
                                           <div
+                                              className="text-[16px] leading-[24px] px-[23px] py-[30px]"
                                               dangerouslySetInnerHTML={{
                                                   __html: item.answer,
                                               }}

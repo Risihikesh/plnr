@@ -51,11 +51,11 @@ const WhyPlnr = () => {
 
             <div className="relative max-w-7xl mx-auto text-center">
                 <hr className="h-[3px] w-[80px] bg-[#00587A] m-auto mb-[12px] border-none" />
-                <h2 className="text-[30px] md:text-[32px] leading-[35px] mb-[24px] font-light">
+                <h2 className="text-[30px] md:text-[32px] leading-[35px] mb-[24px] font-light mb-4">
                     Why&nbsp;
                     <span className="font-bold">PLNR?</span>
                 </h2>
-                <p className="text-base leading-[18px] font-normal mb-12">
+                <p className="text-base leading-[24px] font-normal mb-12">
                     We believe that our success is measured by our client’s
                     success.
                 </p>

@@ -6,23 +6,9 @@ import img5 from "@/Assets/Dashboard/term-insurance/Till-what-age-should-I-purch
 import img6 from "@/Assets/Dashboard/term-insurance/claim-settlement-ratio-by-irdai-2023.png";
 import img7 from "@/Assets/Dashboard/term-insurance/Riders-in-term-insurance.png";
 import img8 from "@/Assets/Dashboard/term-insurance/premium-payment-options-in-term-insurance.png";
-import { StaticImageData } from "next/image";
+import { InsuranceFaqItem } from "@/types";
 
-interface Table {
-    columns: string[];
-    rows: string[][];
-}
-
-export interface FAQItem {
-    question: string;
-    answer: string;
-    slug: string;
-    image: StaticImageData;
-    textContents: string[];
-    tables: Table[];
-}
-
-export const insuranceFaq: FAQItem[] = [
+export const insuranceFaq: InsuranceFaqItem[] = [
     {
         question: "What and Why of Term Insurance?",
         answer: "Term Insurance is the most basic risk management tool. In detail, let me give you an example of risk management. After understanding risk management well, I will further explain what term insurance is, and then 'what' and 'why' of purchasing a term insurance is.",

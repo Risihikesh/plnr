@@ -70,7 +70,7 @@ const HowItWorks = () => {
                 className="h-[180px]"
               />
               <h3 className="text-[16px] leading-[21px] md:text-[24px] md:leading-[38px] font-bold whitespace-nowrap">{step.title}</h3>
-              <p className="text-gray-600 text-[14px] leading-[16px] md:text-[16px] md:leading-[24px]">{step.description}</p>
+              <p className="text-[#3B414D] text-[14px] leading-[16px] md:text-[16px] md:leading-[24px]">{step.description}</p>
             </div>
           ))}
         </div>

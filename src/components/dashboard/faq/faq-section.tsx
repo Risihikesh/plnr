@@ -39,12 +39,12 @@ export default function FAQSection() {
                                     key={index}
                                     value={`item-${index}`}
                                 >
-                                    <AccordionTrigger className="text-left">
-                                            {item.question}
+                                    <AccordionTrigger className="text-left text-[16px] leading-[24px] font-normal p-[12px]">
+                                        {item.question}
                                     </AccordionTrigger>
-                                    <AccordionContent className="bg-[#F6FBFA] p-4">
+                                    <AccordionContent className="bg-[#F6FBFA]">
                                         <div
-                                            className="text-[16px] leading-[24px]"
+                                            className="text-[16px] leading-[24px] px-[23px] py-[30px]"
                                             dangerouslySetInnerHTML={{
                                                 __html: item.answer,
                                             }}
@@ -62,7 +62,7 @@ export default function FAQSection() {
                         key={tab.title}
                         value={tab.value}
                         className={`space-y-6 flex flex-col`}
-                        style={{ marginTop: `-${(index + 1) * 1}px` }}
+                        style={{ marginTop: `-${index * 0.5}px` }}
                     >
                         <h2 className="text-2xl font-extrabold mb-6 self-center m-auto">
                             {tab.title}
@@ -78,12 +78,12 @@ export default function FAQSection() {
                                         key={index}
                                         value={`item-${index}`}
                                     >
-                                        <AccordionTrigger className="text-left">
+                                        <AccordionTrigger className="text-left text-[16px] leading-[24px] font-normal p-[12px]">
                                             {item.question}
                                         </AccordionTrigger>
                                         <AccordionContent className="bg-[#F6FBFA] p-4">
                                             <div
-                                                className="text-[16px] leading-[24px]"
+                                                className="text-[16px] leading-[24px] px-[23px] py-[30px]"
                                                 dangerouslySetInnerHTML={{
                                                     __html: item.answer,
                                                 }}

@@ -3,7 +3,7 @@ import React from "react";
 const TestimonialCard = () => {
   return (
     <div className="flex-col-center gap-[32px] w-[240px] p-[12px] h-fit shadow-[0_0_24px_0_rgba(64,64,64,0.08)] rounded-[12px] bg-background hover:scale-105 transition-all duration-500 cursor-default">
-      <p className="text-[14px] md:text-[16px] leading-[20px] md:leading-[20px] text-black/75 font-normal">
+      <p className="text-[14px] md:text-[16px] leading-[24px] md:leading-[24px] text-black/75 font-normal">
         PLNR has been a lifesaver for my business. Their advisors guided me
         through selecting the right policies, and their claims process was
         smooth and stress-free. I feel secure knowing my company&apos;s future

@@ -32,7 +32,7 @@ export function HowWeDoIt({ sections }: HowWeDoItProps) {
             <div className="px-[10px] sm:px-[30px] md:px-[80px] mx-auto">
                 <div className="text-center flex flex-col items-center justify-between gap-8 mb-8">
                     <div className="md:h-[3px] h-[2px] w-[80px] mb-[2.5%] bg-[#00587A]" />
-                    <h2 className="text-2xl text-[#13171F] md:text-[35px] leading-[35px] font-[300] mb-2">
+                    <h2 className="text-2xl text-[#13171F] md:text-[35px] leading-[35px] font-[300] mb-[-10]">
                         How We <span className=" font-bold"> Do it</span>
                     </h2>
                     <p className="text-[#13171F] text-base leading-[24px] font-normal max-w-[300px] md:max-w-lg mx-auto md:px-4">

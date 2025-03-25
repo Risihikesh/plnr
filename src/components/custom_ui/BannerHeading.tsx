@@ -35,7 +35,7 @@ const BannerHeading: React.FC<BannerProps> = ({
                 imgAspect ? imgAspect : "aspect-[414/296] sm:aspect-[500/200] md:aspect-[1920/280]"
             } max-h-[400px] bg-cover bg-bottom md:bg-center flex items-center justify-center text-white`}
             style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.259), rgba(0, 0, 0, 0.29)), url(${backgroundImage})`,
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.259), rgba(0, 0, 0, 0.29)),url(${backgroundImage})`,
             }}
         >
             <h1 className="text-2xl md:text-[42px] text-[32px] w-[280px] leading-[60px] md:w-fit text-center">
