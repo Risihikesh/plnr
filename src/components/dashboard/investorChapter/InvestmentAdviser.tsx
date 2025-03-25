@@ -6,11 +6,11 @@ const InvestmentAdviserDetails: React.FC = () => {
             title: "A. Vision and Mission Statements for Investors",
             content: (
                 <>
-                    <h3 className="font-[700] text-[14px] leading-[22px]">Vision</h3>
+                    <h3 className="font-[700] text-[16px] leading-[24px]">Vision</h3>
                     <p>Invest with knowledge & safety</p>
 
                     <h3 className="font-semibold mt-4">Mission</h3>
-                    <ul className="list-disc pl-[40px] leading-relaxed text-[14px]">
+                    <ul className="list-disc pl-[40px] leading-[24px] text-[16px]">
                         <li className="text-start " >
                             To enter into an agreement with the client providing all details, including fee details, aspect of
                             Conflict-of-Interest disclosure, and maintaining confidentiality of information.
@@ -36,7 +36,7 @@ const InvestmentAdviserDetails: React.FC = () => {
         {
             title: "B. Details of Business Transacted by the Investment Adviser with Respect to the Investors",
             content: (
-                <ul className="list-disc space-y-2 pl-[40px] text-[14px]">
+                <ul className="list-disc space-y-2 pl-[40px] text-[16px]">
                     <li>
                         <strong>Onboarding of Clients:</strong>
                         <ul className="list-disc list-inside ml-5 my-2">
@@ -62,7 +62,7 @@ const InvestmentAdviserDetails: React.FC = () => {
         {
             title: "D. Details of Grievance Redressal Mechanism and How to Access It",
             content: (
-                <p className="text-[14px]  font-[700]">
+                <p className="text-[16px]  font-[700]">
                     In case of any grievance/complaint, an investor should approach the concerned Investment Adviser and ensure that the grievance is
                     resolved within 30 days. If unresolved, complaints can be logged with SEBI on SEBI's SCORES portal for further redressal.
                 </p>
@@ -72,8 +72,8 @@ const InvestmentAdviserDetails: React.FC = () => {
             title: "E. Expectations from the Investors (Responsibilities of Investors)",
             content: (
                 <>
-                    <h3 className="font-[700] text-[14px] leading-[22px]">Do's</h3>
-                    <ul className="list-disc  space-y-2 pl-[40px] my-2 text-[14px]">
+                    <h3 className="font-[700] text-[16px] leading-[22px]">Do's</h3>
+                    <ul className="list-disc  space-y-2 pl-[40px] my-2 text-[16px]">
                         <li>Always deal with SEBI-registered Investment Advisers.</li>
                         <li>Ensure that the Investment Adviser has a valid registration certificate.</li>
                         <li>Pay only advisory fees to your Investment Adviser. Make payments of advisory fees through banking channels only and maintain duly signed receipts mentioning the details of your payments.</li>
@@ -87,7 +87,7 @@ const InvestmentAdviserDetails: React.FC = () => {
                     </ul>
 
                     <h3 className="font-semibold mt-4">Don'ts</h3>
-                    <ul className="list-disc  space-y-2 pl-[40px] text-[14px] my-2">
+                    <ul className="list-disc  space-y-2 pl-[40px] text-[16px] my-2">
                         <li>Don't fall for stock tips offered under the pretext of investment advice.</li>
                         <li>Do not provide funds for investment to the Investment Adviser.</li>
                         <li>Don't fall for the promise of indicative or exorbitant or assured returns by the Investment Advisers. Don't let greed overcome rational investment
@@ -104,7 +104,7 @@ const InvestmentAdviserDetails: React.FC = () => {
         {
             title: "F. Governing Law and Jurisdiction",
             content: (
-                <p className="font-[700] text-[14px] text-black leading-[22px]">
+                <p className="font-[700] text-[16px] text-black leading-[22px]">
                     In case of any dispute, either judicial or quasi-judicial the same will be subject to the exclusive jurisdiction of the courts in Mumbai.These terms shall be construed in accordance with the laws prevalent in India and are subject to SEBI guidelines, circulars, press releases or notifications that may be issued by SEBI from time to time or the Government of India, to regulate the activities of RIAs (Registered Investment Advisors).
                 </p>
             ),
@@ -116,7 +116,7 @@ const InvestmentAdviserDetails: React.FC = () => {
             {sections.map((section, index) => (
                 <div key={index} className="space-y-4 w-full  sm:w-[90%] md:w-[80%] xl:w-[70%] m-auto px-[16px]">
                     <h2 className="text-[21px] font-[500] text-[#00587A] ">{section.title}</h2>
-                    <div className="text-[14px] leading-[22px] text-black/85">{section.content}</div>
+                    <div className="  text-black/85">{section.content}</div>
                 </div>
             ))}
         </div>

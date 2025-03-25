@@ -16,7 +16,7 @@ const CustomTable: React.FC<TableProps> = ({ headers, rows, renderRow }) => {
                 <TableRow className="hover:bg-[#00587A]">
                     {headers.map((header, index) => (
                         <TableHead
-                            className="text-white font-semibold text-[13px] leading-[20.43px] text-center"
+                            className="text-white font-semibold text-[16px] leading-[24px] text-center"
                             key={index}
                         >
                             {header}

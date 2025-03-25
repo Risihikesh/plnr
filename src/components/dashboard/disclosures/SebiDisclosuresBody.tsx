@@ -9,7 +9,7 @@ const SebiDisclosuresBody: React.FC = () => {
                 <h2 className="font-[500] text-[24px] leading-[37.72px] mt-[32px]">
                     SEBI Registration Details
                 </h2>
-                <div className="text-[14px] font-[500] pt-[27.7px] text-black text-opacity-85">
+                <div className="text-[16px] font-[500] pt-[27.7px] text-black text-opacity-85">
                     <p>
                         RIA Name: PLNR INVESTMENT ADVISORS | RIA No:
                         INA000018966 | Reg. Type: Non-Indivdual | Validity :
@@ -29,7 +29,7 @@ const SebiDisclosuresBody: React.FC = () => {
                 <h2 className="font-[500] text-[24px] leading-[37.72px] mt-[32px]">
                     Regulatory Complaints Disclosure
                 </h2>
-                <p className="text-[14px] leading-[22px] font-[400] pt-[27.7px]">
+                <p className="text-[16px] leading-[24px] font-[400] pt-[27.7px]">
                     SEBI mandates all RIAs to display the complaints status on
                     the website as shown below. Investors can first contact the
                     intermediary in case of complaints, in our case through the
