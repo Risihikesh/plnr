@@ -31,7 +31,7 @@ const BannerHeading: React.FC<BannerProps> = ({
 
     return (
         <div
-            className={`relative w-full min-h-[180px] ${
+            className={`relative w-full min-h-[222px] ${
                 imgAspect ? imgAspect : "aspect-[414/296] sm:aspect-[500/200] md:aspect-[1920/280]"
             } max-h-[400px] bg-cover bg-bottom md:bg-center flex items-center justify-center text-white`}
             style={{

@@ -103,13 +103,13 @@ const Footer = () => {
                                         The Team
                                     </Link>
                                     <Link
-                                        href="/"
+                                        href="/terms-and-conditions"
                                         className="text-[14px] leading-[24px]"
                                     >
                                         Terms and Conditions
                                     </Link>
                                     <Link
-                                        href="/"
+                                        href="/privacy-policy"
                                         className="text-[14px] leading-[24px]"
                                     >
                                         Privacy Policy

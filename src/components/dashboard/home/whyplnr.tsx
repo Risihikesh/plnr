@@ -77,7 +77,7 @@ const WhyPlnr = () => {
                                 <h3 className="text-[15px] leading-[18px] md:text-[24px] md:leading-[30px] font-bold mb-2">
                                     {feature.title}
                                 </h3>
-                                <p className="text-[14px] leading-[16px] md:text-base md:leading-[21px] font-normal text-[#3B414D]">
+                                <p className="text-[14px] leading-[16px] md:text-base md:leading-[24px] font-normal text-[#3B414D]">
                                     {feature.description}
                                 </p>
                             </div>
