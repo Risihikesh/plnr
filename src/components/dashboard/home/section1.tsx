@@ -87,16 +87,16 @@ const Home = () => {
                             {displayText}
                         </span>
                     </p> */}
-                    <p className="text-[27px] lg:text-[36px] xxs:text-[30px] leading-[32px] xxs:leading-[38px] md:text-[32px] md:leading-[48px] font-extrabold">
+                    <p className="text-[27px] pl-2 md:pl-0 lg:text-[36px] xxs:text-[30px] leading-[32px] xxs:leading-[38px] md:text-[32px] md:leading-[48px] font-extrabold">
                         Financial planning <span className="whitespace-nowrap">made easy</span>
                     </p>
-                    <p className="mt-[-10px] ml-[-5px]">
+                    <p className="mt-[-10px] ml-[-5px] pl-2 md:pl-0 ">
                         &nbsp;
                         <span className="text-[#00587A] lg:text-[36px] font-extrabold whitespace-nowrap text-[27px] lg:whitespace-normal md:text-[32px] xxs:leading-[38px] md:leading-[48px] text-left">
                             {displayText}
                         </span>
                     </p>
-                    <p className="text-[18px] leading-[22px] md:leading-[28.29px] lg:font-medium font-normal text-[#13171F] mt-1">
+                    <p className="text-[18px] pl-2 md:pl-0  leading-[22px] md:leading-[28.29px] lg:font-medium font-normal text-[#13171F] mt-1">
                         With PLNR, you get unbiased advice for your personal
                         finances. Clean up your portfolio,choose the right
                         financial product with tax efficiency, get a second
@@ -111,7 +111,7 @@ const Home = () => {
                             Mentor's Testimonial
                         </p>
                     </div>
-                    <div className="flex flex-row justify-center md:flex-row items-center md:justify-start gap-5 w-full">
+                    <div className=" left-0 bg-background flex  items-center justify-center md:justify-start gap-2 w-full">
                         <FreecallButton />
                         <WhatsappButton />
                     </div>
