@@ -111,7 +111,7 @@ const Home = () => {
                             Mentor's Testimonial
                         </p>
                     </div>
-                    <div className="left-0 bg-background flex   p-2 px-4 md:p-0 md:px-0  items-center justify-center md:justify-start gap-2 w-full">
+                    <div className=" left-0 bg-background flex  items-center justify-center md:justify-start gap-2 w-full">
                         <FreecallButton />
                         <WhatsappButton />
                     </div>
