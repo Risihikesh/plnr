@@ -18,6 +18,7 @@ const Home: React.FC = () => {
                     {pricingData.pricing.map((card, index) => (
                         <PricingCard
                             key={index}
+                            priceHeading={card.priceHeading}
                             price={card.price}
                             yearLabel={card.yearLabel}
                             features={card.features}

@@ -272,7 +272,7 @@ export const insuranceFaq: InsuranceFaqItem[] = [
 
 <p>The term insurance requirement will also decrease if you assume higher returns from the sum assured i.e. cover amount.</p><br>
 
-<p>Download- <a class="text-primary cursor-default">Income Replacement Calculator</a></p><br>
+<p>Download- <a href='/income-replacement-calculator.xlsx' download='income-replacement-calculator.xlsx' class="text-primary cursor-pointer">Income Replacement Calculator</a></p><br>
 
 
 <p>In next chapter, we will discuss expenses replacement method – with calculator</p><br>

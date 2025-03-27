@@ -1,6 +1,7 @@
 export const pricingData = {
   pricing: [
     {
+      priceHeading: "Comprehensive Financial Planning",
       price: "13,000",
       yearLabel: "First Year",
       features: [
@@ -39,6 +40,7 @@ export const pricingData = {
       buttonText: "Free Call"
     },
     {
+      priceHeading: "Renewal",
       price: "6,000",
       yearLabel: "2nd Year Onwards",
       features: [
