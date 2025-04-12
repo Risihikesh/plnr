@@ -19,6 +19,7 @@ const nextConfig: NextConfig = {
         pathname: "/vi/**",
       },
     ],
+    domains: ['plnr-storage-bucket.s3.ap-south-1.amazonaws.com'],
   },
 };
 

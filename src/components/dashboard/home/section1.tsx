@@ -5,6 +5,10 @@ import Playbuttonimg from "@/Assets/home/play_button_img.svg";
 import { useState, useEffect } from "react";
 import WhatsappButton from "./WhatsappButton";
 import FreecallButton from "./FreecallButton";
+import { fetchHomeData } from "@/redux/home/homeSlice";
+import { useDispatch, useSelector } from "react-redux";
+import type { AppDispatch, RootState } from '@/redux/store';
+
 
 const Home = () => {
 
@@ -19,14 +23,24 @@ const Home = () => {
     //     ];
     // };
     // const [data, setData] = useState<heroData>();
-    
-    
-    const rotatingTexts = [
+
+    const dispatch = useDispatch<AppDispatch>();
+    const { homeData, loading, error } = useSelector((state: RootState) => state.home);
+
+
+    useEffect(() => {
+        dispatch(fetchHomeData())
+    }, [dispatch])
+
+    const defaultTexts = [
         "SEBI Registered",
-        "No Product Selling",
-        "Fixed Fee - Rs. 13000/-",
-        "15 Years of Experience",
+        
     ];
+
+    const rotatingTexts =
+    homeData?.heroSection?.dynamicTaglines && homeData.heroSection.dynamicTaglines.length > 0
+      ? homeData.heroSection.dynamicTaglines
+      : defaultTexts; 
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
     const [displayText, setDisplayText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
@@ -97,18 +111,12 @@ const Home = () => {
                         </span>
                     </p>
                     <p className="text-[18px] pl-2 md:pl-0  leading-[22px] md:leading-[28.29px] lg:font-medium font-normal text-[#13171F] mt-1">
-                        With PLNR, you get unbiased advice for your personal
-                        finances. Clean up your portfolio,choose the right
-                        financial product with tax efficiency, get a second
-                        opinion about your investments, get advice on health and
-                        term insurance, define your goals and a way to achieve
-                        them with proper equity/debt allocation, all in the same
-                        place.
+                        {homeData?.heroSection?.description}
                     </p>
                     <div className="flex p-2 border m-auto sm:m-0 border-[#2AA4F4] rounded-3xl justify-center items-center w-[276px] cursor-pointer hover:shadow-lg hover:scale-105 hover:bg-[#E6F7FB] transition-all duration-300 ease-in-out">
                         <Image src={Playbuttonimg} alt="no-img" />
                         <p className="text-[#00587A] font-semibold underline">
-                            Mentor's Testimonial
+                           {homeData?.heroSection?.testimonialButton?.text}
                         </p>
                     </div>
                     <div className=" left-0 bg-background flex  items-center justify-center md:justify-start gap-2 w-full">
@@ -116,11 +124,15 @@ const Home = () => {
                         <WhatsappButton />
                     </div>
                 </div>
-                <Image
-                    src={Homeimg}
-                    alt="no-img"
-                    className="w-full lg:h-[387px] md:w-[70%] lg:w-[50%] max-w-[700px] min-w-[50%] lg:min-w-[42%]"
-                />
+                {homeData?.heroSection?.image && (
+                    <Image
+                        src={homeData.heroSection.image as string}
+                        alt={homeData.heroSection.imageAlt as string || "home banner" } 
+                        width={700} 
+                        height={387}
+                        className="w-full lg:h-[387px] md:w-[70%] lg:w-[50%] max-w-[700px] min-w-[50%] lg:min-w-[42%]"
+                    />
+                )}
             </div>
         </>
     );

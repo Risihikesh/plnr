@@ -1,10 +1,15 @@
 // pages/services.tsx
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import planning from "@/Assets/Dashboard/hero/planning.svg";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import WhatsappButton from "./WhatsappButton";
 import FreecallButton from "./FreecallButton";
+import { fetchHomeData } from "@/redux/home/homeSlice";
+import { useDispatch, useSelector } from "react-redux";
+import type { AppDispatch, RootState } from '@/redux/store';
 
 const featureData = {
     buttons: [
@@ -48,10 +53,21 @@ const featureData = {
             description:
                 "We deliver the financial plan in 10–15 days and the mode of delivery would be online. The consultation is for 1 year.",
         },
+        
     ],
 };
 
 const Services = () => {
+    // const dispatch = useDispatch<AppDispatch>();
+    const { homeData, loading, error } = useSelector((state: RootState) => state.home);
+
+    const dynamicButtons = homeData?.whatWeDo?.comprehensive?.content?.plan
+    ?.slice(0, 2)
+    ?.map((plan) => ({
+        price: plan.amount,
+        button: plan.yearTag,
+    }));
+
     return (
         <div className="relative h-fit">
             <div className="static lg:absolute top-0 left-0 w-full bg-[#00587A] py-[60px] px-[30px]">
@@ -65,10 +81,7 @@ const Services = () => {
                                 <span> We Do </span> - Our Services
                             </h2>
                             <p className="hidden sm:block mt-[20px] text-white text-[16px] leading-[24px] font-normal cursor-default">
-                                We help you assess your current financial
-                                situation, establish financial goals and risk
-                                appetite, and devise an investment strategy to
-                                achieve those goals.
+                                {homeData?.whatWeDo?.description}
                             </p>
                         </section>
                         <div className="w-full">
@@ -96,7 +109,7 @@ const Services = () => {
                         <span className="font-bold">Flat Fixed Fee</span>
                     </h3>
                     <div className="flex items-center justify-between sm:justify-start gap-2 xs:gap-[39px] x:gap-[100px] xll:gap-[183px] ">
-                        {featureData.buttons.map((feature, index) => (
+                        {dynamicButtons?.map((feature, index) => (
                             <div key={index} className="flex w-[50%] flex-col items-center">
                                 <h1 className="flex items-start mb-[5px] md:mb-[8px] xl:mb-[12px] text-[24px] lg:text-[30px] xl:text-[40px] leading-[36px] md:leading-[60px] font-[700] text-[#00638D] whitespace-nowrap cursor-default">
                                     {feature.price}
@@ -114,7 +127,7 @@ const Services = () => {
 
                     {/* Flex container for price and items */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap- w-full justify-between mt-[-8px]">
-                        {featureData.items.map((item, idx) => (
+                        {homeData?.whatWeDo?.comprehensive?.content?.plan?.[0]?.services?.map((item, idx) => (
                             <div
                                 className="flex items-start space-x-2 md:space-x-3"
                                 key={idx}
