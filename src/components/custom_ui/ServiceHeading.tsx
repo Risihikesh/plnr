@@ -2,8 +2,7 @@ import React from "react";
 
 interface ServiceHeadingProps {
     title: string;
-    firstLine?: string;
-    secondLine?: string;
+    description: string;
     boldWords?: string[];
     titleColor?: string;
     textColor?: string;
@@ -12,8 +11,7 @@ interface ServiceHeadingProps {
 
 const ServiceHeading: React.FC<ServiceHeadingProps> = ({
     title,
-    firstLine,
-    secondLine,
+    description,
     boldWords = [],
     titleColor = "text-black",
     textColor = "text-[#13171F]",
@@ -41,15 +39,13 @@ const ServiceHeading: React.FC<ServiceHeadingProps> = ({
                 {titleParts.map((word, index) => renderTitle(word, index))}
             </h1>
 
-            <div className="md:w-[42%] pt-4 md:flex md:flex-col hidden justify-center text-center text-hover md:text-[16px]">
-                {firstLine && <p className={textColor}>{firstLine}</p>}
-                {secondLine && <p className={textColor}>{secondLine}</p>}
-            </div>
+            <p className="md:w-[42%] pt-4 md:flex md:flex-col hidden justify-center text-center text-hover md:text-[16px]"
+                dangerouslySetInnerHTML={{ __html: description }}
+            />
 
-            <div className="md:hidden md:w-[40%] justify-center text-center text-hover md:text-[14px]">
-                {firstLine && <p className={textColor}>{firstLine}</p>}
-                {secondLine && <p className={textColor}>{secondLine}</p>}
-            </div>
+            <p className="md:hidden md:w-[40%] justify-center text-center text-hover md:text-[14px]"
+                dangerouslySetInnerHTML={{ __html: description }}
+            />
         </div>
     );
 };

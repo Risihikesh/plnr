@@ -14,7 +14,6 @@ interface PricingCardProps {
     price: string;
     yearLabel: string;
     features: { title: string; description: string }[];
-    buttonText: string;
 }
 
 const PricingFeature: React.FC<PricingFeatureProps> = ({ title, description }) => {
@@ -29,7 +28,7 @@ const PricingFeature: React.FC<PricingFeatureProps> = ({ title, description }) =
     );
 };
 
-const PricingCard: React.FC<PricingCardProps> = ({priceHeading, price, yearLabel, features, buttonText }) => {
+const PricingCard: React.FC<PricingCardProps> = ({priceHeading, price, yearLabel, features }) => {
     return (
         <div className="border border-black rounded-lg p-3 sm:p-6 shadow-lg bg-white max-w-[35rem] w-full  overflow-hidden">
             <h2 className="text-[24px] font-semibold text-black mb-[8px]">{priceHeading}</h2>

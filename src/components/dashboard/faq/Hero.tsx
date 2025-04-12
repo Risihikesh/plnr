@@ -1,14 +1,19 @@
 import React from "react";
 import Image from "next/image";
-import bg from "@/Assets/Dashboard/hero/faqbg.svg";
+import { getFaqData } from "@/services/faq";
+import { FaqDataType } from "@/types/faq";
 
-function Hero() {
+async function Hero() {
+
+    const res = (await getFaqData()) as FaqDataType;
+    const data = res?.res?.data?.data;
+    
   return (
     <div className="relative h-[276px] md:h-[222px] w-full text-white flex flex-col items-center m-auto gap-[11px]">
       <div className="absolute inset-0 z-0">
         <Image
-          src={bg}
-          alt="Background"
+          src={data.image || ""}
+          alt={data.imageAlt}
           layout="fill"
           objectFit="cover"
           className="opacity-100"
