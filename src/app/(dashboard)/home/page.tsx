@@ -1,4 +1,4 @@
-import Section1 from "../../../components/dashboard/home/section1";
+import {Home} from "@/components/dashboard/home/section1";
 import Policy from "../../../components/dashboard/home/policy";
 import { HowWeDoIt } from "@/components/dashboard/home/how-we-do-it";
 import { NewsSection } from "@/components/dashboard/home/news-section";
@@ -15,17 +15,19 @@ export const metadata = constructMetadata();
 import { auth } from "../../../../auth";
 
 const Page = async () => {
-    const sections = createVideoSections(videoData.urls, videoData.titles);
-    
-    const session = await auth();
-    console.log(session);
+  const sections = createVideoSections(videoData.urls, videoData.titles);
+
+  const session = await auth();
+  console.log(session);
 
   return (
     <div>
-      <Section1 />
+      <Home/>
       <Services />
-      <HowWeDoIt sections={sections} />
-      <NewsSection logos={newsLogos} />
+      {/* <HowWeDoIt sections={sections} /> */}
+      <HowWeDoIt />
+      {/* <NewsSection logos={newsLogos} /> */}
+      <NewsSection  />
       <WhyPlnr />
       <HowItWorks />
       <FinancePlan />

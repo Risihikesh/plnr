@@ -11,7 +11,6 @@ import { getYouTubeVideoId } from "@/lib/youtube";
 export async function VideoSections() {
     const res = (await getGetStartedData()) as GetStartedData;
     const data = res?.res?.data;
-    console.log(data.cards);
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-12">

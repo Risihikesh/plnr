@@ -12,7 +12,7 @@ function page() {
   return (
     <div className="max-w-[1920px] flex flex-col items-center m-auto justify-between">
       <Hero />
-      <VideoSections />
+      <VideoSections/>
     </div>
   );
 }

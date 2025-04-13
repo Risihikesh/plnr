@@ -53,21 +53,25 @@ const featureData = {
             description:
                 "We deliver the financial plan in 10–15 days and the mode of delivery would be online. The consultation is for 1 year.",
         },
-        
+
     ],
 };
 
 const Services = () => {
-    // const dispatch = useDispatch<AppDispatch>();
+    const dispatch = useDispatch<AppDispatch>();
     const { homeData, loading, error } = useSelector((state: RootState) => state.home);
 
     const dynamicButtons = homeData?.whatWeDo?.comprehensive?.content?.plan
-    ?.slice(0, 2)
-    ?.map((plan) => ({
-        price: plan.amount,
-        button: plan.yearTag,
-    }));
+        ?.slice(0, 2)
+        ?.map((plan) => ({
+            price: plan.amount,
+            button: plan.yearTag,
+        }));
 
+    
+    useEffect(() => {
+        dispatch(fetchHomeData())
+    }, [dispatch])
     return (
         <div className="relative h-fit">
             <div className="static lg:absolute top-0 left-0 w-full bg-[#00587A] py-[60px] px-[30px]">

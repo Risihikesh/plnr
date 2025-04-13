@@ -88,7 +88,7 @@ export const fetchHomeData = createAsyncThunk<HomeData, void, { rejectValue: str
   'dashboard/fetchHomeData',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${apiUrl}api/homescreen/getHomeScreen`);
+      const response = await axios.get<{ data: HomeData }>(`${apiUrl}api/homescreen/getHomeScreen`);
       return response.data.data;
     } catch (error) {
       return rejectWithValue('Something went wrong');

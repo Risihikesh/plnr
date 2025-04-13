@@ -5,8 +5,12 @@ import Icon3 from "@/Assets/home/icon3.svg";
 import Icon4 from "@/Assets/home/icon4.svg";
 import Icon5 from "@/Assets/home/icon5.svg";
 import Image from "next/image";
+import { getHomeData } from "@/services/getHomeData";
+import { HomeData } from "@/types/home";
 
-const WhyPlnr = () => {
+const WhyPlnr = async () => {
+    const res = (await getHomeData()) as { res: { data: HomeData } | null; err: any };
+    const data = res?.res?.data?.whyPLNR;
     const features = [
         {
             title: "Fee-Only",
@@ -51,25 +55,26 @@ const WhyPlnr = () => {
 
             <div className="relative max-w-7xl mx-auto text-center">
                 <hr className="h-[3px] w-[80px] bg-[#00587A] m-auto mb-[12px] border-none" />
-                <h2 className="text-[30px] md:text-[32px] leading-[35px] mb-[24px] font-light mb-4">
+                <h2 className="text-[30px] md:text-[32px] leading-[35px] mb-[24px] font-light ">
                     Why&nbsp;
                     <span className="font-bold">PLNR?</span>
                 </h2>
                 <p className="text-base leading-[24px] font-normal mb-12">
-                    We believe that our success is measured by our client’s
-                    success.
+                    {data?.description || "We believe that our success is measured by our client’s success."}
                 </p>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-[10px] xs:gap-[16px] md:gap-6 items-stretch">
-                    {features.map((feature, index) => (
+                    {data?.cards?.map((feature, index) => (
                         <div
-                            key={index}
+                            key={feature._id}
                             className="w-full bg-white text-gray-800 rounded-lg shadow-lg p-2 md:p-6 flex flex-col gap-[16px] items-center justify-between h-full transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-blue-50 cursor-default max-w-[350px]"
                         >
                             <div className="w-full flex justify-center">
                                 <Image
-                                    src={feature.icon}
-                                    alt={feature.title}
+                                    src={feature.image}
+                                    alt={feature.imageAlt}
+                                    width={140}
+                                    height={140}
                                     className="w-[140px] h-[140px] object-contain"
                                 />
                             </div>

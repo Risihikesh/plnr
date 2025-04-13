@@ -9,7 +9,7 @@ import { contactUsSchemaType, contactUsSchema } from "@/lib/types";
 
 declare const grecaptcha: any;
 
-export function ContactForm() {
+export function ContactForm({ heading }: { heading: string }) {
   const [recaptchaLoaded, setRecaptchaLoaded] = useState(false);
   const [recaptchaError, setRecaptchaError] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
@@ -81,7 +81,7 @@ export function ContactForm() {
   return (
     <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <h3 className="text-xl font-semibold text-gray-900 mb-2">
-        Send us a message
+        {heading}
       </h3>
 
       <div className="space-y-4">

@@ -2,7 +2,7 @@ import React from "react";
 
 interface ServiceHeadingProps {
     title: string;
-    description: string;
+    description?: string;
     boldWords?: string[];
     titleColor?: string;
     textColor?: string;
@@ -40,11 +40,11 @@ const ServiceHeading: React.FC<ServiceHeadingProps> = ({
             </h1>
 
             <p className="md:w-[42%] pt-4 md:flex md:flex-col hidden justify-center text-center text-hover md:text-[16px]"
-                dangerouslySetInnerHTML={{ __html: description }}
+                dangerouslySetInnerHTML={{ __html: description || '' }}
             />
 
             <p className="md:hidden md:w-[40%] justify-center text-center text-hover md:text-[14px]"
-                dangerouslySetInnerHTML={{ __html: description }}
+                dangerouslySetInnerHTML={{ __html: description || '' }}
             />
         </div>
     );
