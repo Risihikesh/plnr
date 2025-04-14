@@ -158,6 +158,17 @@ export type InNewsItem = {
     __v: number;
   };
   
+  export type Testimonial = {
+    _id: string;
+    name: string;
+    position: string;
+    content: string;
+    image: string;
+    imageAlt: string;
+    isFeatured: boolean;
+    __v: number;
+  };
+  
 
 export type HomeData = {
     heroSection: HeroSection;
@@ -181,5 +192,6 @@ export type HomeData = {
     whyPLNR: WhyPlnr; 
     howItWorks: HowItWorks;
     download: DownloadSection;
+    testimonials: Testimonial[];
   };
   

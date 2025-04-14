@@ -106,7 +106,7 @@ body {
         gap: var(--gap);
         justify-content: space-between;
         align-items: center;
-        animation: scroll 40s linear infinite;
+        animation: scroll 80s linear infinite;
         @media screen and (max-width: 1024px){
             flex-direction: row;
             animation: scroll-row 40s linear infinite;

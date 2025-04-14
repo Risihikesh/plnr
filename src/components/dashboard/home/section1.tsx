@@ -111,7 +111,7 @@ export  function Home ()  {
                         </span>
                     </p> */}
                     <p className="text-[27px] pl-2 md:pl-0 lg:text-[36px] xxs:text-[30px] leading-[32px] xxs:leading-[38px] md:text-[32px] md:leading-[48px] font-extrabold">
-                        Financial planning <span className="whitespace-nowrap">made easy</span>
+                    {data?.heroSection?.title}
                     </p>
                     <p className="mt-[-10px] ml-[-5px] pl-2 md:pl-0 ">
                         &nbsp;

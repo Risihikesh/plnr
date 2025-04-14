@@ -1,11 +1,15 @@
 import Avatar from "@/Assets/Dashboard/about/avatar-founder.svg";
 import ServiceHeading from "@/components/custom_ui/ServiceHeading";
-const AboutSection = () => {
+import { getAboutData } from "@/services/about";
+import { AboutData } from "@/types/about";
+const AboutSection = async () => {
+    const res = (await getAboutData()) as { res: { data: AboutData } | null; err: any };
+    const data = res?.res?.data;
     return (
         <div className="">
             {/* Intro Section */}
-            <section className="pt-[29px] px-[16px] md:px-[180px] mx-auto text-[14px] md:text-[16px] text-[#13171F] leading-[24px] md:leading-[24px] gap-[20px] flex flex-col pb-[170px] ">
-                <p className="font-[400]">
+            <section dangerouslySetInnerHTML={{ __html: data?.description || "" }} className="pt-[29px] px-[16px] md:px-[180px] mx-auto text-[14px] md:text-[16px] text-[#13171F] leading-[24px] md:leading-[24px] gap-[20px] flex flex-col pb-[170px] ">
+                {/* <p className="font-[400]">
                     Think financial planning and all you get is insurance
                     agents, mutual funds agents, and relationship managers
                     selling you the commission laded products without
@@ -25,19 +29,21 @@ const AboutSection = () => {
                 </p>
                 <p className="font-[400]">
                     So, you never have to worry about your finances anymore.
-                </p>
+                </p> */}
             </section>
 
             {/* Vision and Mission Section */}
             <section className="flex flex-col px-[16px] md:px-0 text-center gap-[57px] pb-[140px]">
-                <div className="w-[300px] xs:w-fit m-auto">
-                    <ServiceHeading title="Our Vision" boldWords={["vision"]} />
-                    <span className=" text-black/85 mt-2">
-                        We have the vision to touch 1 Lakh lives through our
-                        financial planning services.
-                    </span>
-                </div>
-                <div className="w-[300px] xs:w-fit m-auto">
+                {data?.visionMission?.map((item) => (
+                    <div key={item._id} className="w-[300px] xs:w-fit m-auto text-center">
+                        <ServiceHeading
+                            title={item.title}
+                            boldWords={[item.title.toLowerCase().includes("vision") ? "vision" : "mission"]}
+                        />
+                        <span className="text-black/85  block px-[10px]">{item.description}</span>
+                    </div>
+                ))}
+                {/* <div className="w-[300px] xs:w-fit m-auto">
                     <ServiceHeading
                         title="Our Mission"
                         boldWords={["mission"]}
@@ -46,12 +52,36 @@ const AboutSection = () => {
                         We’re on a mission to make financial planning simple and
                         affordable.
                     </span>
-                </div>
+                </div> */}
             </section>
 
             {/* Team Section */}
             <section className="bg-[#F9F9F9] px-[16px] md:px-0 text-center pt-[60px]">
-                <ServiceHeading
+                {data?.meetTheTeam && (
+                    <>
+                        <ServiceHeading title={data.meetTheTeam.title} boldWords={["the", "team"]} />
+
+                        <div>
+                            <img
+                                src={data.meetTheTeam.image}
+                                alt={data.meetTheTeam.imageAlt}
+                                className="w-[215px] h-[215px] mx-auto rounded-full object-cover mb-4"
+                            />
+
+                            <div className="flex flex-col gap-[15px] mt-2 text-[14px] md:text-[16px] leading-[19px] font-[300]">
+                                <h3 className="text-[22px] font-[500] leading-[25px] text-gray-800">
+                                    {data.meetTheTeam.name}
+                                </h3>
+                                <h2>{data.meetTheTeam.position}</h2>
+                                <p>{data.meetTheTeam.education}</p>
+                                {data.meetTheTeam.description?.map((desc, i) => (
+                                    <p key={i}>{desc}</p>
+                                ))}
+                            </div>
+                        </div>
+                    </>
+                )}
+                {/* <ServiceHeading
                     title="Meet The   Team"
                     boldWords={["the", "team"]}
                 />
@@ -82,7 +112,7 @@ const AboutSection = () => {
                             planning clients
                         </p>
                     </div>
-                </div>
+                </div> */}
             </section>
         </div>
     );
