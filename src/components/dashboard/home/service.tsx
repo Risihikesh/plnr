@@ -90,7 +90,7 @@ const Services = () => {
                         </section>
                         <div className="w-full">
                             <img
-                                src={planning.src}
+                                src={homeData?.whatWeDo?.image as string}
                                 alt="Services Illustration"
                                 className="w-full max-w-md cursor-default"
                             />
@@ -126,7 +126,7 @@ const Services = () => {
                     </div>
 
                     <h3 className="text-[20px] leading-[38px] font-bold text-[#065374]">
-                        What All It Includes
+                        {homeData?.whatWeDo?.comprehensive?.content?.plan?.[0]?.includeText}
                     </h3>
 
                     {/* Flex container for price and items */}

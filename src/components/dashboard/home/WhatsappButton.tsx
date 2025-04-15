@@ -1,14 +1,38 @@
 "use client";
 
+import { getServicesData } from "@/services/services";
+import { ServicesDataType } from "@/types/services";
 import { useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const WhatsappButton = ({ disabled }: { disabled?: boolean }) => {
 
     const router = useRouter();
-    const phoneNumber = "+918860000332"; 
-    const message = "Hi there! I would like to know more about your services."; 
+   
+    const message = "Hi there! I would like to know more about your services.";
+    // const res = (await getServicesData()).res as ServicesDataType;
+    const [phoneNumber, setPhoneNumber] = useState<string | null>(null);
 
+   useEffect(() => {
+    async function fetchData() {
+      try {
+        const res = (await getServicesData()).res as ServicesDataType;
+        const whatsappButton = res?.data?.plan?.[0]?.buttons?.find(
+          (btn) => btn.text === "WhatsApp"
+        );
+        if (whatsappButton?.link) {
+          const cleanedPhone = whatsappButton.link.replace(/[^\d]/g, "");
+          setPhoneNumber(cleanedPhone);
+        }
+      } catch (error) {
+        console.error("Failed to fetch data", error);
+      }
+    }
+
+    fetchData();
+  }, []);
+    //    console.log(data)
+    // const phoneNumber = "785";
     const openWhatsApp = (phoneNumber: string, message: string) => {
         const encodedMessage = encodeURIComponent(message);
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -26,7 +50,7 @@ const WhatsappButton = ({ disabled }: { disabled?: boolean }) => {
             window.open(webUrl, "_blank");
         }
     };
-    
+
     return (
         <button
             className="w-[180px]  lg:w-[180px] flex bg-[#25D366] hover:bg-white hover:text-[#25D366] active:bg-[#09B349] border border-transparent hover:border-[#25D366] py-[10px] sm:px-[20px] lg:px-[22px] rounded-md text-white font-semibold gap-2 justify-center items-center cursor-pointer group disabled:bg-[#E5E7EB] disabled:cursor-not-allowed disabled:text-[#A2A7B3] disabled:hover:border-transparent"
@@ -34,7 +58,7 @@ const WhatsappButton = ({ disabled }: { disabled?: boolean }) => {
             // onClick={() => {
             //     router.push("/contactus");
             // }}
-            onClick={() => openWhatsApp(phoneNumber, message)}
+            onClick={() =>  phoneNumber && openWhatsApp(phoneNumber, message)}
             disabled={disabled}
         >
             <svg

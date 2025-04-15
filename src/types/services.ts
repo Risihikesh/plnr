@@ -19,6 +19,7 @@ export interface ServicesDataType {
             }>;
             buttons: Array<{
                 text: string;
+                link: string;
                 _id: string;
             }>;
             _id: string;
