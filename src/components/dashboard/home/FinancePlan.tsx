@@ -25,7 +25,7 @@ const FinancePlan = async () => {
 
             {/* Button Section */}
             <div>
-                <a href="/sample_plan.pdf" download className="bg-white text-[#00587A] px-[104px] md:px-[56px] py-[14px] md:py-[12px] text-[16px] font-semibold rounded-md hover:bg-blue-100">
+                <a href= {data?.pdfFile}  download className="bg-white text-[#00587A] px-[104px] md:px-[56px] py-[14px] md:py-[12px] text-[16px] font-semibold rounded-md hover:bg-blue-100">
                     Download
                 </a>
             </div>

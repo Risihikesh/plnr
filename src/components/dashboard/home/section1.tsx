@@ -9,7 +9,7 @@ import FreecallButton from "./FreecallButton";
 import { getHomeData } from "@/services/getHomeData";
 import { HomeData } from "@/types/home";
 
-export  function Home ()  {
+export function Home() {
 
     // type heroData = {
     //     title: string;
@@ -28,16 +28,16 @@ export  function Home ()  {
     const [data, setData] = useState<HomeData | null>(null);
     useEffect(() => {
         const fetchData = async () => {
-          try {
-            const res = await getHomeData();
-            setData(res?.res?.data || null); // Handle the response
-          } catch (err) {
-            console.error("Error fetching data:", err);
-          }
+            try {
+                const res = await getHomeData();
+                setData(res?.res?.data || null); // Handle the response
+            } catch (err) {
+                console.error("Error fetching data:", err);
+            }
         };
-    
+
         fetchData();
-      }, []);
+    }, []);
 
     // useEffect(() => {
     //     dispatch(fetchHomeData())
@@ -45,27 +45,27 @@ export  function Home ()  {
 
     const defaultTexts = [
         "SEBI Registered",
-        
+
     ];
 
     const rotatingTexts =
-    data?.heroSection?.dynamicTaglines && data.heroSection.dynamicTaglines.length > 0
-      ? data.heroSection.dynamicTaglines
-      : defaultTexts;
+        data?.heroSection?.dynamicTaglines && data.heroSection.dynamicTaglines.length > 0
+            ? data.heroSection.dynamicTaglines
+            : defaultTexts;
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
     const [displayText, setDisplayText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {
         const currentText = rotatingTexts[currentTextIndex];
-        let timeout: NodeJS.Timeout;  
+        let timeout: NodeJS.Timeout;
         if (!isDeleting) {
             if (displayText.length < currentText.length) {
                 timeout = setTimeout(() => {
                     setDisplayText(
                         currentText.substring(0, displayText.length + 1)
                     );
-                }, 100); 
+                }, 100);
             } else {
                 timeout = setTimeout(() => setIsDeleting(true), 1000);
             }
@@ -75,7 +75,7 @@ export  function Home ()  {
                     setDisplayText(
                         currentText.substring(0, displayText.length - 1)
                     );
-                }, 50); 
+                }, 50);
             } else {
                 setIsDeleting(false);
                 setCurrentTextIndex((prev) => (prev + 1) % rotatingTexts.length);
@@ -84,7 +84,7 @@ export  function Home ()  {
 
         return () => clearTimeout(timeout);
     }, [displayText, isDeleting, currentTextIndex, rotatingTexts]);
-    
+
 
     // useEffect(() => {
     //     const fetchData = async () => {
@@ -111,7 +111,9 @@ export  function Home ()  {
                         </span>
                     </p> */}
                     <p className="text-[27px] pl-2 md:pl-0 lg:text-[36px] xxs:text-[30px] leading-[32px] xxs:leading-[38px] md:text-[32px] md:leading-[48px] font-extrabold">
-                    {data?.heroSection?.title}
+                        {data?.heroSection?.title}
+                        {/* Financial planning <span className="whitespace-nowrap">made easy</span> */}
+
                     </p>
                     <p className="mt-[-10px] ml-[-5px] pl-2 md:pl-0 ">
                         &nbsp;
@@ -120,29 +122,35 @@ export  function Home ()  {
                         </span>
                     </p>
                     <p className="text-[18px] pl-2 md:pl-0  leading-[22px] md:leading-[28.29px] lg:font-medium font-normal text-[#13171F] mt-1">
-                    {data?.heroSection?.description || "With PLNR, you get unbiased advice for your personal finances. Clean up your portfolio, choose the right financial product with tax efficiency, get a second opinion about your investments, get advice on health and term insurance, define your goals and a way to achieve them with proper equity/debt allocation, all in the same place."}
+                        {data?.heroSection?.description || "With PLNR, you get unbiased advice for your personal finances. Clean up your portfolio, choose the right financial product with tax efficiency, get a second opinion about your investments, get advice on health and term insurance, define your goals and a way to achieve them with proper equity/debt allocation, all in the same place."}
 
                     </p>
-                    <div className="flex p-2 border m-auto sm:m-0 border-[#2AA4F4] rounded-3xl justify-center items-center w-[276px] cursor-pointer hover:shadow-lg hover:scale-105 hover:bg-[#E6F7FB] transition-all duration-300 ease-in-out">
-                        <Image src={Playbuttonimg} alt="no-img" />
-                        <p className="text-[#00587A] font-semibold underline">
-                           {data?.heroSection?.testimonialButton?.text}
-                        </p>
-                    </div>
+                    <a
+                        href={data?.heroSection?.testimonialButton?.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <div className="flex p-2 border m-auto sm:m-0 border-[#2AA4F4] rounded-3xl justify-center items-center w-[276px] cursor-pointer hover:shadow-lg hover:scale-105 hover:bg-[#E6F7FB] transition-all duration-300 ease-in-out">
+                            <Image src={Playbuttonimg} alt="no-img" />
+                            <p className="text-[#00587A] font-semibold underline">
+                                {data?.heroSection?.testimonialButton?.text}
+                            </p>
+                        </div>
+                    </a>
                     <div className=" left-0 bg-background flex  items-center justify-center md:justify-start gap-2 w-full">
                         <FreecallButton />
                         <WhatsappButton />
                     </div>
                 </div>
-                
-                    <Image
-                        src={data?.heroSection?.image as string || Homeimg}
-                        alt={data?.heroSection?.imageAlt as string || "home banner" } 
-                        width={700} 
-                        height={387}
-                        className="w-full lg:h-[387px] md:w-[70%] lg:w-[50%] max-w-[700px] min-w-[50%] lg:min-w-[42%]"
-                    />
-                
+
+                <Image
+                    src={data?.heroSection?.image as string || Homeimg}
+                    alt={data?.heroSection?.imageAlt as string || "home banner"}
+                    width={700}
+                    height={387}
+                    className="w-full lg:h-[387px] md:w-[70%] lg:w-[50%] max-w-[700px] min-w-[50%] lg:min-w-[42%]"
+                />
+
             </div>
         </>
     );

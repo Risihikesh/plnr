@@ -8,20 +8,21 @@ export interface ServicesDataType {
         title: string;
         description: string;
         plan: Array<{
-                amount: string;
-                yearTag: string;
-                includeText: string;
-                services: Array<{
-                    title: string;
-                    description: string;
-                    _id: string;
-                }>;
-                buttons: Array<{
-                    text: string;
-                    _id: string;
-                }>;
+            title: string;
+            amount: string;
+            yearTag: string;
+            includeText: string;
+            services: Array<{
+                title: string;
+                description: string;
                 _id: string;
             }>;
+            buttons: Array<{
+                text: string;
+                _id: string;
+            }>;
+            _id: string;
+        }>;
         __v: 0;
     };
 }

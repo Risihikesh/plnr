@@ -16,7 +16,7 @@ export default async function ContactPage() {
         <div className="flex min-h-screen w-fit self-center m-auto max-w-[1062px]  max-h-[1141px] flex-col justify-centre md:flex-row">
             <div
                 className="hidden md:flex md:w-1/2 max-w-[386.66px] max-h-full  relative bg-cover bg-center"
-                style={{ backgroundImage: `url(${contactusBG.src})` }}
+                style={{ backgroundImage: `url(${data.image})` }}
             >
                 <h1
                     className="relative z-10 p-12 text-white text-4xl"

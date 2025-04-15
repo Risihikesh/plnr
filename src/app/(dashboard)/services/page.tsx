@@ -23,7 +23,7 @@ const Home: React.FC = async () => {
                     {data.plan.map((card, index) => (
                         <PricingCard
                             key={index}
-                            priceHeading={priceHeading[index]}
+                            priceHeading={card.title}
                             price={card.amount}
                             yearLabel={card.yearTag}
                             features={card.services}

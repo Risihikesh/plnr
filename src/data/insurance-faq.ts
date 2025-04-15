@@ -188,7 +188,7 @@ export const insuranceFaq: InsuranceFaqItem[] = [
     {
         question: "How much term Insurance do I need - Part 1",
         answer: "Every human being has an unlimited earning potential. You may be starting your job with a monthly salary of 25,000 per month but 10 years down the line, you may be earning 2,50 Lakhs per month or it may be 25 Lakhs per month. Ideally, there is no way to calculate Human Life Value but still, it needs to drill down to a certain number.",
-        slug: "how-much-term-insurance-do-i-need-1",
+        slug: "how-much-term-insurance-do-i-need-part-1",
         image: img3,
         tables: [
             {

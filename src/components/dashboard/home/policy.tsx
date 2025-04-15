@@ -8,9 +8,14 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
+import { getHomeData } from "@/services/getHomeData";
+import { HomeData } from "@/types/home";
 
 
-const Policy = () => {
+const Policy = async() => {
+    const res = (await getHomeData()) as { res: { data: HomeData } | null; err: any };
+        const data = res?.res?.data?.understand;
+    
   return (
       <div
           id="compare"
@@ -23,9 +28,7 @@ const Policy = () => {
                   <span className="font-bold block sm:inline">Policy</span>
               </h1>
               <p className="text-normal sm:text-base leading-[24px] md:text-normal text-gray-500 max-w-xl mx-auto">
-                  Understand what your policy has to offer. Read terms and
-                  conditions in plain English. And discover the good, the bad,
-                  and the leading features in your insurance plan.
+                  {data?.description}
               </p>
 
               <div className="mt-[32px] md:mt-[100px] flex flex-col md:flex-row md:h-[70px] justify-center items-center gap-[10px] xl:gap-[15px] bg-transparent md:bg-white bg-none rounded-lg md:py-[8px] md:px-[10px] md:pl-[20px] p-0 border-none md:border-[1px] border-[#DDDDDD] pb-[100px] md:pb-auto">
@@ -144,8 +147,10 @@ const Policy = () => {
 
               <div className=" hidden mt-12 md:flex justify-center">
                   <Image
-                      src={Understandthepolicyimg}
-                      alt="Policy Illustration"
+                      src={data?.image as string}
+                      width={288}
+                      height={180}
+                      alt={data?.imageAlt as string}
                       className="w-72 lg:w-56 sm:w-96"
                   />
               </div>

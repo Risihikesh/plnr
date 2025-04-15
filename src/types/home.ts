@@ -4,6 +4,7 @@ export type HeroSection = {
     dynamicTaglines: string[];
     testimonialButton: {
         text: string;
+        link: string;
     };
     image: string;
     imageAlt: string;
@@ -155,6 +156,7 @@ export type InNewsItem = {
     button: {
       text: string;
     };
+    pdfFile: string;
     __v: number;
   };
   
@@ -167,6 +169,18 @@ export type InNewsItem = {
     imageAlt: string;
     isFeatured: boolean;
     __v: number;
+  };
+  export type UnderstandSection = {
+    _id: string;
+    title: string;
+    description: string;
+    button: string;
+    __v: number;
+    image: string;
+    imageAlt: string;
+    insurer: string[];
+    policy: string[];
+    product: string[];
   };
   
 
@@ -193,5 +207,6 @@ export type HomeData = {
     howItWorks: HowItWorks;
     download: DownloadSection;
     testimonials: Testimonial[];
+    understand: UnderstandSection;
   };
   
