@@ -17,6 +17,8 @@ import { Button } from "@/components/ui/button";
 import FreecallButton from "@/components/dashboard/home/FreecallButton";
 import WhatsappButton from "@/components/dashboard/home/WhatsappButton";
 import { useEffect, useState } from "react";
+import { getFooterData } from "@/services/footer";
+import { FooterData } from "@/types/footer";
 
 const Footer = () => {
     const [timeLeft, setTimeLeft] = useState(7);
@@ -24,7 +26,7 @@ const Footer = () => {
 
     useEffect(() => {
         if (!isVisible) return;
-        
+
         if (timeLeft <= 0) {
             setIsVisible(false);
             setTimeLeft(7);
@@ -38,52 +40,47 @@ const Footer = () => {
         return () => clearTimeout(timer);
     }, [timeLeft, isVisible]);
 
+
+    const [footerData, setFooterData] = useState<FooterData | null>(null);
+
+    useEffect(() => {
+        const fetchFooter = async () => {
+            const { res, err } = await getFooterData();
+            if (res) {
+                setFooterData(res);
+            } else {
+                console.error("Failed to fetch footer data:", err);
+            }
+        };
+
+        fetchFooter();
+    }, []);
+
     return (
         <>
             <div className="flex flex-col mt-5">
-                <Onfooter />
+                <Onfooter  data={footerData?.getStarted}/>
                 <div className="flex flex-col bg-[#04344D] text-white md:py-10 md:px-[50px] xl:px-[100px] p-2 gap-y-10">
                     <div className="flex flex-col md:flex-row justify-between gap-10">
                         <div className="flex flex-col gap-y-2">
                             <Link href="/">
                                 <Image
-                                    src={Footerlogo}
-                                    alt="no-footer-logo"
-                                    className="ml-[-10px]"
+                                    src={footerData?.logo?.image as string}
+                                    width={95}
+                                    height={95}
+                                    alt={footerData?.logo?.imageAlt as string}
+                                    className="ml-[-10px] object-contain"
                                 />
                             </Link>
                             <div className="flex gap-2 mt-[-20px]">
-                                <Link href="/">
-                                    <Image
-                                        src={Facebooklogo}
-                                        alt="no-facebook-logo"
-                                        className="w-[28px]"
-                                    />
-                                </Link>
-                                <Link href="/">
-                                    <Image
-                                        src={Twitterlogo}
-                                        alt="no-twitter-logo"
-                                        className="w-[28px]"
-                                    />
-                                </Link>
-                                <Link href="/">
-                                    <Image
-                                        src={Youtubelogo}
-                                        alt="no-youtube-logo"
-                                        className="w-[28px]"
-                                    />
-                                </Link>
-                                <Link href="/">
-                                    <Image
-                                        src={Instagramlogo}
-                                        alt="no-instagram-logo"
-                                        className="w-[28px]"
-                                    />
-                                </Link>
+                                {footerData?.socialMedia?.map((link, index) => (
+                                    <Link target="_blank" key={index} href={link?.link}>
+                                        <Image src={link.icon} alt={link.icon} width={28} height={28} className="w-[28px]" />
+                                    </Link>
+                                ))}
                             </div>
                             <p className="text-[14px] leading-[21px]">
-                                2021 PLNR - All rights reserved
+                                {footerData?.reservedText?.text}
                             </p>
                         </div>
 
@@ -201,7 +198,7 @@ const Footer = () => {
                                             alt="no-mail-icon"
                                         />
                                         <p className="text-[14px] leading-[24px]">
-                                            support@plnr.in
+                                            {footerData?.getInTouch?.email}
                                         </p>
                                     </div>
                                     <div className="flex gap-2">
@@ -210,7 +207,7 @@ const Footer = () => {
                                             alt="no-call-icon"
                                         />
                                         <p className="text-[14px] leading-[24px]">
-                                            +91 8860000332
+                                            {footerData?.getInTouch?.phone}
                                         </p>
                                     </div>
                                     <div className="flex gap-2 relative">
@@ -218,13 +215,9 @@ const Footer = () => {
                                             src={Footerlocationicon}
                                             alt="no-mail-icon" className="absolute top-0 left-0"
                                         />
-                                        <p className="text-[14px] leading-[24px] pl-7">
-                                            {" "}
-                                            Shop No. 2, 1st Floor, Tulip <br />
-                                            Plaza, <br />
-                                            Plot No. 114, Sector 13,<br />
-                                            Kharghar <br />
-                                            Navi Mumbai-410210
+                                        <p className="text-[14px] leading-[30px] pl-7">
+                                            {footerData?.getInTouch?.address}
+                                            
                                         </p>
                                     </div>
                                     {/* <p className="text-[14px] leading-[24px]">
@@ -246,19 +239,12 @@ const Footer = () => {
 
                     <div className="flex flex-col gap-y-4 md:gap-y-10 pb-4 w-[98%] md:w-[95%]">
                         <p className="font-medium text-sm">
-                            Name of Advisor : PLNR INVESTMENT ADVISORS | SEBI
-                            Registration Number - INA000018966 | Registration
-                            Type : Non-Individual
+                            Name of Advisor : {footerData?.sebi?.nameOfAdvisor} |
+                            SEBI Registration Number - {footerData?.sebi?.sebiRegNo} | 
+                            Registration Type : {footerData?.sebi?.regType}
                         </p>
                         <p className="text-[14px] leading-[22px] font-normal">
-                            Registration granted by SEBI, membership of BSE
-                            Administration and Supervision Limited (BASL) and
-                            certification from National Institute of Securities
-                            Markets (NISM) in no way guarantee performance of
-                            the Investment Adviser or provide any assurance of
-                            returns to investors. Investment in securities
-                            market are subject to market risks. Read all the
-                            related documents carefully before investing.
+                        {footerData?.sebi?.description}
                         </p>
                     </div>
                 </div>
@@ -278,10 +264,10 @@ const Footer = () => {
             {
                 isVisible &&
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 mx-2 md:mx-auto"
-                        onClick={() => {
-                            setIsVisible(false)
-                            setTimeLeft(7)
-                        }}
+                    onClick={() => {
+                        setIsVisible(false)
+                        setTimeLeft(7)
+                    }}
                 >
                     <div className="bg-white rounded-lg shadow-lg w-[100%] max-w-xl h-[95%] p-5 md:p-10 overflow-auto">
                         <h2 className="text-[17px] md:text-[32px] font-bold text-center text-[#065374]">
@@ -356,10 +342,10 @@ const Footer = () => {
                             </p>
                             <div className="mt-4 text-center">
                                 <Button
-                                        onClick={() => {
-                                            setIsVisible(false)
-                                            setTimeLeft(7)
-                                        }}
+                                    onClick={() => {
+                                        setIsVisible(false)
+                                        setTimeLeft(7)
+                                    }}
                                     variant="close"
                                 >
                                     CLOSE
