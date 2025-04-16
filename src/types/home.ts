@@ -182,6 +182,33 @@ export type InNewsItem = {
     policy: string[];
     product: string[];
   };
+
+
+  export type HomeFaqs = {
+    _id: string;
+    title: string;
+    button: {
+      text: string;
+    };
+    faqs: FaqTopic;
+    __v: number;
+  };
+  
+  export type FaqTopic = {
+    _id: string;
+    topic: string;
+    faqs: FaqItem[];
+    isFeatured: boolean;
+    createdAt: string;
+    updatedAt: string;
+    __v: number;
+  };
+  
+  export type FaqItem = {
+    _id: string;
+    question: string;
+    answer: string;
+  };
   
 
 export type HomeData = {
@@ -208,5 +235,6 @@ export type HomeData = {
     download: DownloadSection;
     testimonials: Testimonial[];
     understand: UnderstandSection;
+    homeFaqs: HomeFaqs;
   };
   

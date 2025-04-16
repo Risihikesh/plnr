@@ -9,6 +9,12 @@ const Testimonials = async () => {
   const res = (await getHomeData()) as { res: { data: HomeData } | null; err: any };
       const data = res?.res?.data?.testimonials || [];
       const loopedTestimonials = [...data, ...data];
+      const mappedTestimonials = data.map((item) => ({
+        name: item?.name,
+        image: item?.image,
+        description: item?.content || "", 
+        designation: item?.position || "", 
+      }));
   return (
     <>
       <section className="h-fit w-full relative">
@@ -20,7 +26,7 @@ const Testimonials = async () => {
             </h1>
           </div>
         </div>
-        <SpecialCardDirectory />
+        <SpecialCardDirectory testimonials={mappedTestimonials} />
         <div className="block lg:absolute lg:top-0 lg:left-0 w-full h-[400px] lg:h-full lg:px-[100px] xl:px-[200px]">
         <div className="flex flex-col lg:flex-row w-full h-fit lg:h-full ml-auto lg:w-fit overflow-hidden">
           {[...Array(2)].map((_, index) => (
