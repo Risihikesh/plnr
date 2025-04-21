@@ -64,13 +64,14 @@ const Footer = () => {
                     <div className="flex flex-col md:flex-row justify-between gap-10">
                         <div className="flex flex-col gap-y-2">
                             <Link href="/">
+                            {footerData?.logo?.image ?(
                                 <Image
                                     src={footerData?.logo?.image as string}
                                     width={95}
                                     height={95}
                                     alt={footerData?.logo?.imageAlt as string}
                                     className="ml-[-10px] object-contain"
-                                />
+                                />) : null}
                             </Link>
                             <div className="flex gap-2 mt-[-20px]">
                                 {footerData?.socialMedia?.map((link, index) => (

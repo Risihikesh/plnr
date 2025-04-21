@@ -170,19 +170,37 @@ export type InNewsItem = {
     isFeatured: boolean;
     __v: number;
   };
-  export type UnderstandSection = {
+  
+export type UnderstandSection = {
+  _id: string;
+  title: string;
+  description: string;
+  button: string;
+  __v: number;
+  image: string;
+  imageAlt: string;
+  insurer: {
     _id: string;
-    title: string;
-    description: string;
-    button: string;
-    __v: number;
-    image: string;
-    imageAlt: string;
-    insurer: string[];
-    policy: string[];
-    product: string[];
-  };
-
+    name: string;
+    product: {
+      _id: string;
+      name: string;
+    };
+  }[];
+  policy: {
+    _id: string;
+    name: string;
+    insurer: {
+      _id: string;
+      name: string;
+    };
+  }[];
+  product: {
+    _id: string;
+    name: string;
+  }[];
+};
+  
 
   export type HomeFaqs = {
     _id: string;
